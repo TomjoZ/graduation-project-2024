@@ -1,0 +1,437 @@
+/**
+Copyright 2021 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+@import "../../../styles/variables.css";
+
+.header {
+  -webkit-transition: height 0.2s;
+  -ms-transition: height 0.2s;
+  -moz-transition: height 0.2s;
+  -o-transition: height 0.2s;
+  transition: height 0.2s;
+  height: 140px;
+  width: 100%;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0)
+  );
+  background-size: cover !important;
+}
+.left {
+  width: calc(100% - 256px);
+  float: left;
+}
+.right {
+  width: 256px;
+  padding: 20px 0;
+  float: right;
+}
+.tbInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.icon,
+.shareIcon {
+  margin-right: 5px;
+}
+.icon svg,
+.shareIcon svg {
+  stroke: var(--prime-color-white);
+  fill: transparent;
+  width: 13px;
+  height: 15px;
+  transform: scaleX(-1);
+  stroke-width: 3;
+}
+.shareIcon {
+  margin-top: 10px;
+}
+.icon,
+.urlIcon {
+  margin-right: 8px;
+}
+.icon svg,
+.urlIcon svg {
+  fill: var(--prime-color-primary);
+  width: 13px;
+  height: 15px;
+  float: left;
+}
+.urlIcon {
+  margin-top: 8px;
+}
+.shareButton {
+  border: 0.1rem solid var(--prime-color-nc4);
+  background-color: transparent;
+  align-items: center;
+  min-width: 280px !important;
+  border-radius: 24px;
+  font-size: var(--prime-font-size-14);
+  font-weight: 400;
+  min-height: 30px;
+  color: var(--prime-color-white);
+  cursor: pointer;
+  padding: 0 10px;
+  font-family: "source-sans-pro";
+}
+
+.enrollmentCountButton {
+  border: 0.1rem solid var(--prime-color-nc4);
+  background-color: var(--prime-color-white);
+  align-items: center;
+  min-width: 280px !important;
+  border-radius: 24px;
+  font-size: var(--prime-font-size-14);
+  font-weight: 400;
+  min-height: 30px;
+  color: var(--prime-color-white);
+  cursor: pointer;
+  padding: 0 10px;
+  font-family: "source-sans-pro";
+}
+
+.boxButton {
+  border: 0.1rem solid var(--prime-color-nc2);
+  background-color: var(--prime-color-white);
+  align-items: center;
+  min-width: 280px !important;
+  font-size: var(--prime-font-size-14);
+  font-weight: 200;
+  min-height: 30px;
+  color: var(--prime-color-nc3);
+  border-bottom: 0.05rem solid var(--prime-color-nc2);
+  float: left;
+  text-align: left;
+}
+.boxButton:hover,
+.boxButton:focus,
+.boxButton:focus-visible {
+  background: var(--prime-color-nc4);
+}
+
+.format {
+  letter-spacing: 1px;
+  color: var(--prime-color-white);
+  line-height: 1.42857;
+  font-size: var(--prime-font-size-14);
+}
+
+.title {
+  margin-top: 35px;
+  margin-bottom: 0px;
+  text-align: left;
+  color: var(--prime-color-white);
+  line-height: 120%;
+  vertical-align: bottom;
+  font-size: var(--prime-font-size-24);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+.titleBlock {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.progressContainer {
+  width: 80%;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 40px;
+}
+.progressBar {
+  width: 95%;
+  margin-right: 10px;
+}
+.percent {
+  position: relative;
+  bottom: 8px;
+  color: var(--prime-color-white);
+  text-shadow: var(--prime-text-shadow);
+}
+.progressBar div[class^="spectrum-BarLoader-fill"] {
+  background: var(--prime-color-nc4);
+}
+
+.progressBar div[class^="spectrum-BarLoader-track"] {
+  background: var(--prime-color-nc3);
+}
+
+.ratingText {
+  color: var(--prime-color-nc3);
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.avgRatingOverview {
+  min-width: 280px;
+  padding: 0 10px;
+  display: flex;
+  justify-content: center;
+  background: var(--prime-color-white);
+  align-items: center;
+  border-radius: 15px;
+  height: 30px;
+  margin-bottom: 1rem;
+}
+
+.headingContainer {
+  margin: 0 auto;
+  display: flex;
+  max-width: var(--prime-container-max-width-desktop);
+  width: var(--prime-container-width);
+}
+.share, .disableShareInTeamsMobile  {
+  display: none;
+}
+.box {
+  display: none;
+}
+.avgRatingOverviewMobile {
+  display: none;
+}
+.formatMobile {
+  display: none;
+}
+.bookMark {
+  display: none;
+}
+.breadcrumbParent {
+  display: flex;
+  position: absolute;
+  margin-top: 5px;
+}
+.breadcrumbLink {
+  color: var(--prime-color-white);
+  cursor: pointer;
+  max-width: 165px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: none;
+}
+.breadcrumbLink:hover  {
+  text-decoration: underline;
+}
+.breadcrumbArrow {
+  color: var(--prime-color-white);
+  cursor: pointer;
+}
+.breadcrumbDesktop {
+  display: flex;
+}
+.breadcrumbMobile {
+  display: none;
+}
+.progressLabel {
+  margin: -10px 10px 0px 0px;
+  color: var(--prime-color-white);
+  word-break: keep-all;
+}
+
+.enrollmentLabel{
+  color: var(--prime-color-black);
+}
+
+.enrollmentCountButtonGroup{
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .headingContainer {
+    max-width: var(--prime-container-max-width-tablet);
+    width: var(--prime-container-width);
+    padding: 0;
+  }
+  .title {
+    font-size: var(--prime-font-size-20);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .header {
+    padding: 0 20px;
+  }
+
+  .progressBar {
+    width: 100%;
+    background-color: var(--prime-color-white);
+    opacity: 0.2;
+    border-radius: 2px;
+  }
+  .headingContainer {
+    width: 100%;
+    max-width: var(--prime-container-max-width-mobile);
+  }
+  .percent {
+    bottom: 10px;
+    font-size: var(--prime-font-size-14);
+  }
+  .shareButton {
+    display: none;
+  }
+  .share, .disableShareInTeamsMobile {
+    display: block;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 3rem;
+    background-color: transparent;
+    position: relative;
+    border: 0.1rem solid var(--prime-color-white);
+    float: right;
+    margin-bottom: 0.5rem;
+  }
+  /*CPRIME-64683*/
+  .disableShareInTeamsMobile {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  .boxButton {
+    display: none;
+  }
+  .box {
+    display: block;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 3rem;
+    margin-top: 0.5rem;
+    background-color: var(--prime-color-white);
+    border: 0.1rem solid var(--prime-color-primary);
+  }
+
+  .xshare {
+    display: flex;
+    flex-direction: column;
+    width: 3rem;
+    position: absolute;
+    right: 0;
+    margin-right: 1rem;
+  }
+
+  .xshareIcon svg {
+    stroke: var(--prime-color-white);
+    fill: var(--prime-color-white);
+    width: 20px;
+    height: 20px;
+    transform: scaleX(-1);
+    stroke-width: 3;
+  }
+
+  .xurlIcon svg {
+    fill: var(--prime-color-primary);
+    width: 20px;
+    height: 20px;
+  }
+
+  .ratingText {
+    display: none;
+  }
+  .avgRatingOverviewMobile {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .avgRatingOverview {
+    display: none;
+  }
+
+  .shareButton {
+    display: none;
+  }
+
+  .left {
+    width: 100%;
+  }
+
+  .titleBlock {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 2rem 0 1rem 0;
+  }
+
+  .title {
+    margin-top: 0px;
+  }
+
+  .progressContainer {
+    padding-top: 0px;
+    width: 100%;
+  }
+
+  .format {
+    display: none;
+  }
+
+  .formatMobile {
+    display: flex;
+    letter-spacing: 1px;
+    color: var(--prime-color-white);
+    line-height: 1.42857;
+    font-size: var(--prime-font-size-14);
+    margin-top: 10px;
+  }
+  .bookMark {
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    right: 5rem;
+    background: transparent;
+    border: 0.1rem solid var(--prime-color-white);
+    border-radius: 3rem;
+    background-color: transparent;
+  }
+  .bookMark svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--prime-color-white);
+    stroke: var(--prime-color-white);
+  }
+
+  .breadcrumbParent {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    padding-left: 13px;
+    margin-bottom: 10px;
+  }
+  .breadcrumbLink {
+    color: var(--prime-color-black);
+    max-width: 135px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: none;
+  }
+  
+  .breadcrumbArrow {
+    color: var(--prime-color-black);
+    padding-right: 5px;
+  }
+  .breadcrumbMobile {
+    display: block;
+  }
+  .breadcrumbDesktop {
+    display: none;
+  }
+  .breadcrumbLink {
+    color: var(--prime-color-black);
+  }
+
+  .enrollmentCountButtonGroup{
+    display: none;
+  }
+}

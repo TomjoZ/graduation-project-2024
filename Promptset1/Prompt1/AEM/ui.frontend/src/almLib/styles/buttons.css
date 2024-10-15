@@ -1,0 +1,52 @@
+
+.almButton {
+  box-sizing: border-box;
+  border-radius: 3rem;
+  cursor: pointer;
+  display: block;
+  font-size: var(--prime-font-size-14);
+  font-weight: 400;
+  min-height: 32px;
+  /* min-width: 280px !important; */
+  padding: 5px 15px;
+  border: 0.1rem solid transparent;
+  
+}
+.almButton:focus-within,
+.almButton:focus-visible {
+  outline: none;
+}
+.primary {
+  color: var(--prime-color-white);
+  background-color: var(--prime-color-primary);
+  border-color: var(--prime-color-primary);
+}
+.primary:enabled:hover,
+.primary:enabled:focus {
+  opacity: 0.8;
+}
+
+.primary:disabled {
+  cursor: default;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.secondary {
+  color: var(--prime-color-primary);
+  background-color: var(--prime-color-white);
+  border-color: var(--prime-color-primary);
+}
+
+.secondary:enabled:hover,
+.secondary:enabled:focus {
+  opacity: 0.7;
+}
+
+.secondary:disabled {
+  background: var(--prime-color-nc2);
+  border-color: var(--prime-color-nc4);
+  color: var(--prime-color-white);
+  cursor: not-allowed;
+  font-family:'source-sans-pro'
+}

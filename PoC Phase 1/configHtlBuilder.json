@@ -1,0 +1,13 @@
+{
+  "project": {
+    "aemProjectPath": "/Users/tomzwikker/Documents/graduation-project-2024/Promptset1/Prompt1/AEM",
+    "rootPackage": "com.adobe.learning.core",
+    "componentGroup": "Test - Content",
+    "appName": "Learning"
+  },
+  "html": {
+    "useSingleFile": true,
+    "singleFilePath": "/Users/tomzwikker/Documents/graduation-project-2024/Promptset1/Prompt1/response_claude.html",
+    "directoryPath": "/Users/tomzwikker/Documents/graduation-project-2024/Promptset1/Prompt1/"
+  }
+}

@@ -1,0 +1,155 @@
+/**
+Copyright 2021 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+@import "../../../styles/variables.css";
+.container {
+  position: relative;
+  flex-grow: 1;
+}
+
+.input {
+  background: var(--prime-color-white) 0% 0% no-repeat padding-box;
+  border: 1px solid var(--prime-color-nc2);
+  border-radius: 2px;
+  opacity: 1;
+  font-size: var(--prime-font-size-14);
+  padding: 10px 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.searchIcon {
+  fill: var(--prime-color-nc3);
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+.searchItemSelected:hover{
+  background-color: var(--prime-color-nc2);
+}
+.searchItemSelected{
+  padding-left: 40px;
+}
+.searchItemNoPadding{
+  padding: 0px;
+}
+
+.customInput input {
+  padding-right: 30px;
+  height: 38px;
+  font-size: var(--prime-font-size-14);
+  border-color: var(--prime-color-nc3) !important;
+  border-radius: 0px 3px 3px 0px;
+}
+
+.searchContainer {
+  display: flex;
+}
+
+.searchDropdown {
+  border-radius: 0 5px 5px;
+  background: var(--prime-color-white);
+  box-sizing: border-box;
+  position: absolute;
+  border: 1px solid var(--prime-color-nc2);
+  z-index: 1;
+  box-shadow: 0 0 5px rgb(0 0 0 / 20%);
+  top: 32px;
+  width: 100%;
+}
+
+.searchDropdownFilterContainer {
+  left: -32px;
+  width: 80%;
+}
+
+.searchDropdownFilterIcon {
+  cursor: pointer;
+  height: 38px;
+  width: 32px;
+  border: 1px solid var(--prime-color-nc3);
+  border-radius: 3px 0 0 3px;
+  display: inline-block;
+  background: var(--prime-color-white);
+  padding: 9px 5px;
+  border-right-style: none;
+}
+
+.hide {
+  display: none;
+}
+
+.searchSuggestionIcons {
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.searchSeparator {
+  height: 2px;
+  margin: 0 10px 10px;
+}
+
+.searchDropdownContainer a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.searchDropdownContainer h4 {
+  padding-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.searchDropdownContainer ul {
+  margin-bottom: 5px;
+  list-style-type: none;
+  color: var(--prime-color-nc3);
+  cursor: pointer;
+}
+
+.searchDropdownContainer input[type="checkbox"]{
+  cursor: pointer;
+}
+
+.searchDropdownFilterContainer ul {
+  padding-left: 10px;
+}
+
+.searchInDropdownList {
+  list-style-type: none;
+  color: var(--prime-color-nc3);
+}
+.primeCheckbox {
+  margin-bottom: 5px;
+  list-style-type: none;
+  color: var(--prime-color-nc3);
+}
+@media screen and (max-width: 450px) {
+  .container {
+    margin-left: auto;
+    width: 70%;
+  }
+
+  .searchDropdownContainer ul {
+    font-size: 14px;
+  }
+
+  .searchInListItem {
+    font-size: 14px;
+  }
+  .searchDropdownContainer h4 {
+    font-size: 18px;
+  }
+}

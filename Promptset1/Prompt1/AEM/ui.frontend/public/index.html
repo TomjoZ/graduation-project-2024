@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <script>
+      var isAlmLocalEnv = true;
+    </script>
+    <script>
+      class NamespacedSessionStorage {
+        constructor(sessionStorage, key) {
+          this.sessionStorage = sessionStorage;
+          this.key = key;
+        }
+        _makeKey(key) {
+          return `${this.key}__${key}`;
+        }
+        getItem(name) {
+          return this.sessionStorage.getItem(this._makeKey(name));
+        }
+        setItem(name, value) {
+          return this.sessionStorage.setItem(this._makeKey(name), value);
+        }
+        removeItem(name) {
+          return this.sessionStorage.removeItem(this._makeKey(name));
+        }
+      }
+
+      class BrowserPersistence {
+        constructor() {
+          this.key = "ALM_BROWSER_PERSISTENCE";
+          if('sessionStorage' in window){
+            this.storage = new NamespacedSessionStorage(sessionStorage, this.key);
+          }
+          
+        }
+        _getKey(key) {
+          return `${this.key}__${key}`;
+        }
+        getItem(name) {
+          const now = Date.now();
+          let item = null;
+          try {
+            item = this.storage.getItem(name);
+          } catch (error) {
+            item = window[this._getKey(name)] || null;
+          }
+          
+          if (!item) {
+            return undefined;
+          }
+          const { value, ttl, timeStored } = JSON.parse(item);
+
+          if (ttl && now - timeStored > ttl * 1000) {
+            this.removeItem(name);
+            return undefined;
+          }
+
+          return JSON.parse(value);
+        }
+        setItem(name, value, ttl) {
+          const timeStored = Date.now();
+          const valueToStore =  JSON.stringify({
+              value: JSON.stringify(value),
+              timeStored,
+              ttl,
+            })
+            try {
+              this.storage.setItem(name, valueToStore);
+            } catch (error) {
+              window[this._getKey(name)] = valueToStore;
+            }
+          
+        }
+        removeItem(name) {
+          try {
+            this.storage.removeItem(name);
+          } catch (error) {
+            window[this._getKey(name)] = null;
+          }
+          
+        }
+      }
+    </script>
+    <script>
+      const ALMConfig = {
+        almBaseURL: "https://captivateprimestage1.adobe.com",
+        primeApiURL: "https://captivateprimestage1.adobe.com/primeapi/v2/",
+        locale: "en-US",
+        cdnBaseUrl: "https://cpcontentsdev.adobe.com",
+        usageType: "aem-commerce",
+        accountData: "{}",
+        esBaseUrl:
+          "https://primeapps-stage.adobe.com/almsearch/api/v1/stage1/7319/237fa1c8-591f-4904-aa6f-07578c3be5a2",
+        instancePath: "/instance.html",
+        catalogPath: "/explore.html",
+        trainingOverviewPath: "/trainingOverview.html",
+        communityPath: "/community.html",
+        communityBoardsPath: "/community.html",
+        communityBoardDetailsPath: "/community.html",
+        badgesPath: "/badges.html",
+        almCdnBaseUrl: "xxxxx",
+        primeTileColors: {
+          0: "#00000",
+          1: "#FFFFFF",
+          2: "#445566",
+        },
+        commerceSignInPath: "signIn",
+        commerceURL: "xxxx",
+        commerceStoreName: "xxx",
+      };
+
+      const isPrimeUserLoggedIn = () => {
+        return true;
+      };
+
+      const getAccessToken = () => {
+        return "XXXXXX";
+        // return "b9e1945a881994633176fbce2c67db30";
+      };
+      const COMMERCE_TOKEN_COOKIE_NAME = "alm_commerce_token";
+
+      const getCommerceToken = () => {
+        let cookieValues = document.cookie.match(
+          `(^|[^;]+)\\s*${COMMERCE_TOKEN_COOKIE_NAME}\\s*=\\s*([^;]+)`
+        );
+        return cookieValues ? cookieValues.pop() : "";
+      };
+
+      const getALMConfig = () => {
+        return window.ALM.ALMConfig;
+      };
+
+      const navigateToTrainingOverviewPage = (
+        trainingId,
+        trainingInstanceId = "",
+      ) => {
+        let { trainingOverviewPath } = getALMConfig();
+        trainingOverviewPath = getUrl(trainingOverviewPath, {
+          trainingId: trainingId,
+        });
+        trainingOverviewPath = trainingInstanceId
+          ? getUrl(trainingOverviewPath, {
+              trainingInstanceId: trainingInstanceId,
+            })
+          : trainingOverviewPath;
+        window.location = trainingOverviewPath;
+      };
+
+      const navigateToInstancePage = (
+        trainingId,
+      ) => {
+        let { instancePath } = getALMConfig();
+        let url = getUrl(instancePath, { trainingId: trainingId });
+        window.location = url;
+      };
+
+      const navigateToBoardDetailsPage = (boardId) => {
+        let { communityBoardDetailsPath } = getALMConfig();
+        window.location = getUrl(communityBoardDetailsPath, {
+          boardId: boardId,
+        });
+      };
+
+      const navigateToBadgesPage = () => {
+        let { badgesPath } = getALMConfig();
+        let url = getUrl(badgesPath);
+        window.location = url;
+      }
+
+      const getUrlWithQueryParams = (urlStr, params) => {
+        const url = new URL(urlStr);
+        for (const param in params) {
+          url.searchParams.append(param, params[param].toString());
+        }
+        return url.toString();
+      };
+
+      const getUrl = (urlStr, params) => {
+        for (const param in params) {
+          urlStr = urlStr + "/" + param + "/" + params[param];
+        }
+        return urlStr;
+      };
+
+      async function getALMUser() {
+        if (!window.ALM.isPrimeUserLoggedIn()) {
+          window.ALM.storage.removeItem("user");
+          return;
+        }
+
+        let user = window.ALM.storage.getItem("user");
+        if (user) {
+          return user;
+        }
+        console.log("Fetch user");
+        const primeApiURL = window.ALM.ALMConfig.primeApiURL;
+        const userUrl = `${primeApiURL}/user?include=account&enforcedFields[account]=extensions`;
+        const headers = {
+          Accept: "application/vnd.api+json",
+          Authorization: `oauth ${getAccessToken()}`,
+        };
+        try {
+          const userResponse = await fetch(`${userUrl}`, {
+            credentials: "include",
+            headers,
+            method: "GET",
+          });
+          if (userResponse && userResponse.status == 200) {
+            user = await userResponse.json();
+            const userStr = JSON.stringify(user);
+            console.log("set user");
+            window.ALM.storage.setItem("user", userStr, 1800);
+            return userStr;
+          } else {
+            console.error("User call failed!!");
+            window.ALM.storage.removeItem("user");
+          }
+        } catch (e) {
+          window.ALM.storage.removeItem("user");
+          console.log("Fetch user exception " + e);
+          throw e;
+        }
+      }
+
+      const updateALMUser = async () => {
+        window.ALM.storage.removeItem("user");
+        return getALMUser();
+      };
+
+      const getAccountActiveFields = async () => {
+        const primeApiURL = getALMConfig().primeApiURL;
+        const accountActiveFieldsUrl = primeApiURL + "account/fields";
+        const headers = {
+          Accept: "application/vnd.api+json",
+          Authorization: `oauth ${getAccessToken()}`,
+        };
+        try {
+          const response = await fetch(accountActiveFieldsUrl, {
+            credentials: "include",
+            headers,
+            method: "GET",
+          });
+          if (response) {
+            const activeFields = await response.json();
+            console.log(activeFields);
+            return activeFields;
+          }
+        } catch (e) {
+          throw e;
+        }
+      };
+
+      const updateAccountActiveFieldsDetails = async (activeFields, userId) => {
+        const baseApiUrl = getALMConfig().primeApiURL;
+        const body = {
+          data: {
+            type: "user",
+            id: userId,
+            attributes: {
+              fields: activeFields,
+            },
+          },
+        };
+
+        const updateAccountActiveFieldsUrl =
+          baseApiUrl + "users/" + `${userId}`;
+        const headers = { "content-type": "application/json" };
+        try {
+          const response = await fetch(updateAccountActiveFieldsUrl, {
+            credentials: "include",
+            headers: {
+              "Content-type": "application/json",
+              Authorization: `oauth ${getAccessToken()}`,
+            },
+            method: "PATCH",
+            body: JSON.stringify(body),
+            Accept: "application/vnd.api+json",
+          });
+          if (response) {
+            const activeFields = await response.json();
+            console.log(activeFields);
+            await updateALMUser();
+            return activeFields;
+          }
+        } catch (e) {
+          throw e;
+        }
+      };
+
+      const navigateToCommerceSignInPage = () => {
+        let { commerceSignInPath } = getALMConfig();
+        window.location =
+          commerceSignInPath +
+          "?redirectPath=" +
+          encodeURIComponent(window.location.pathname);
+      };
+
+      function handlePrimeLogIn() {
+        console.log("login to prime");
+      }
+
+      function handleLogIn() {
+        let { commerceSignInPath } = getALMConfig();
+        window.location.pathname = commerceSignInPath;
+        switch (CURRENT_USAGE_TYPE) {
+          case PRIME_USAGE_TYPE:
+          case ES_USAGE_TYPE:
+            handlePrimeLogIn();
+            break;
+
+          case COMMERCE_USAGE_TYPE:
+            window.ALM.navigateToCommerceSignInPage();
+            break;
+
+          default:
+            break;
+        }
+      }
+
+      function handleLogOut() {
+        const COMMERCE_TOKEN_COOKIE_NAME = "alm_commerce_token";
+        const ACCESS_TOKEN_COOKIE_NAME = "alm_cp_token";
+        document.cookie =
+          ACCESS_TOKEN_COOKIE_NAME +
+          "=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+
+        document.cookie =
+          COMMERCE_TOKEN_COOKIE_NAME +
+          "=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+        window.ALM.storage.removeItem("user");
+        window.ALM.storage.removeItem("CART_ID");
+        window.ALM.storage.removeItem("PRIME_CATALOG_FILTER");
+        window.ALM.storage.removeItem("COMMERCE_FILTERS");
+      }
+
+      function isExtensionAllowed(extension){
+       return Boolean(extension)
+      //  return extension && extension.launchType === "IN_APP"
+      }
+
+      window.ALM = window.ALM || {};
+      window.ALM.ALMConfig = ALMConfig; //window.ALM.ALMConfig || primeConfig;
+      window.ALM.getALMConfig = getALMConfig;
+      window.ALM.handleLogIn = handleLogIn;
+      window.ALM.navigateToTrainingOverviewPage =
+        navigateToTrainingOverviewPage;
+      window.ALM.navigateToInstancePage = navigateToInstancePage;
+      window.ALM.navigateToBoardDetailsPage = navigateToBoardDetailsPage;
+      window.ALM.navigateToCommerceSignInPage = navigateToCommerceSignInPage;
+      window.ALM.navigateToBadgesPage = navigateToBadgesPage;
+      window.ALM.isPrimeUserLoggedIn = isPrimeUserLoggedIn;
+      window.ALM.getAccessToken = getAccessToken;
+      window.ALM.getCommerceToken = getCommerceToken;
+      window.ALM.getALMUser = getALMUser;
+      window.ALM.getAccountActiveFields = getAccountActiveFields;
+      window.ALM.updateAccountActiveFieldsDetails =
+        updateAccountActiveFieldsDetails;
+      window.ALM.updateALMUser = updateALMUser;
+      window.ALM.storage = window.ALM.storage || new BrowserPersistence();
+      window.ALM.updateCart = function (value) {
+        console.log(value);
+      };
+      window.ALM.isExtensionAllowed = isExtensionAllowed;
+      // if (isPrimeUserLoggedIn()) {
+      //   getALMUser();
+      // }
+    </script>
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <!-- <div class="instance__container"></div> -->
+    <!-- <div class="training__page__container" data-show-description="true" data-show-author-info="true" data-show-enroll-deadline="true"></div>   -->
+    <div
+    class="catalog__container"
+    data-show-filters="true"
+    data-show-search="true"
+    data-catalogs="true"
+    data-lo-types="true"
+    data-skill-name="true"
+    data-lo-format="true"
+    data-duration="true"
+    data-price="true"
+    data-skills-level="true"
+    data-learner-state="true"
+    data-tag-name="true"
+    data-skill-level="true"
+    data-cities="true"
+  ></div>
+
+  
+    <!-- <div class="badges__container"></div>
+    <div class="author__container"></div> -->
+
+    <!-- <div class="profile__container"></div> -->
+    <!-- /* 
+    <div class="skills__container"></div>
+    <div
+      class="activeFields__container"
+      data-section1-title="Organization"
+      data-section1-description="Section 1 description"
+      data-section1-active-fields="Location,Department"
+      data-section2-title="Role"
+      data-section2-description="Section 2 description"
+      data-section2-active-fields="hobby, new location"
+    ></div> */-->
+
+     
+    <!-- <div class="notification__container"></div> -->
+
+    <!-- <div class="notification__container"></div> -->
+    <!--/* <div class="boards__container"></div> */-->
+
+    <!-- <div class="notification__container"></div> -->
+    <!--/* <div class="boards__container"></div> */-->
+    <!--/* <div id="root1"></div> */-->
+    <!--
+     This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    --> 
+  </body>
+</html>

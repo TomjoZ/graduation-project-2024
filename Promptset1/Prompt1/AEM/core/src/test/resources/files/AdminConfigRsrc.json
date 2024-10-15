@@ -1,0 +1,11 @@
+ {
+     "jcr:content": {
+       "jcr:primaryType": "cq:PageContent",
+       "almBaseURL":"https://learningmanagerstage1.adobe.com",
+       "refreshToken": "refreshToken",
+       "clientId": "clientId",
+       "clientSecret": "clientSecret",
+       "theme.background": "transparent",
+       "testConfig": "test1"
+      }
+}
