@@ -1,113 +1,11 @@
-Objective:
-Your objective is to attribute regular HTML with field type attributes and a unique field name (varName) according to a specific syntax for a  tool, that turns this into adobe experience manager CMS components, to understand it. You only return the new complate HTML, no further text.
-
-Syntax:
-Here is a list of all the attributes that are currently supported by the module: textfield-[VarName] textarea-[VarName] checkbox-[VarName] link-[VarName] img-[VarName] select-[VarName] description list-[VarName] The [VarName] placeholder represents the variable name you choose for the field and should be replaced by the actual name in your HTML.
-
-1. textField
-Add the textfield-[VarName] attribute to your header (h1,h2,h3 etc) tags, replacing [VarName] with your unique chosen field name.
-HTML Original:<h1> Component Title </h1>
-What module expects:<h1 textfield-title> Component Title </h1>
-
-2. textarea
-Add the textarea-[VarName] attribute to your paragraph tag, replacing [VarName] with your chosen field name. Use this for fields like descriptions.
-HTML Original:<p> Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-What module expects:<p textarea-message> Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-
-3. checkbox
-Look at context and assign checkbox attribute when necessary.
-HTML Original:
-<div>
-    <p>Species: Human</p>
-</div>
-What module expects:
-<div checkbox-check>
-    <p>Species: Human</p>
-</div>
-
-4. link
-Add the link-[VarName] attribute to your a tag, replacing [VarName] with your chosen field name.
-
-HTML Original:
-<a href="#">
-    Click Here
-</a>
-What module expects:
-<a link-linkToWebsite href="#">
-    Click Here
-</a>
-
-5. img
-Add the img-[VarName] attribute to your html tag, replacing [VarName] with your chosen field name.
-HTML Original:
-<img src="/banners/img1.png" alt="Img Description"/>
-What module expects:
-<img img-bannerImg src="/banners/img1.png" alt="Img Description"/>
-
-6. description
-The description requires the presence of another attribute from the list. Apply to every attributes tag.
-HTML Original:
-<p> Component Title </p>
-What module expects:
-<p textfield-title description="This field defines the component title"> Component Title </p>
-
-textfield-title serves as an example and it can be as well e.g. img-varName , link-varName etc.
-
-
-
-7. list-[VarName]
-Add the list-[VarName] attribute to <ul> tag, replacing [VarName] with your chosen list name.
-Only used in <ul> <li>.
-
-HTML Original:
-<ul>
-    <li>
-        <div>
-            <h3>Margherita</h3>
-        </div>
-        <p>10.99 €</p>
-    </li>
-    <li>
-        <div>
-            <h3>Pepperoni</h3>
-        </div>
-        <a href="#">Click the link here!</a>
-        <p>13.99 €</p>
-    </li>
-</ul>
-What module expects:
-<ul list-pizzas>
-    <li>
-        <div>
-            <h3 textfield-title>Margherita</h3>
-        </div>
-        <p textfield-price>10.99 €</p>
-    </li>
-    <li>
-        <div>
-            <h3>Pepperoni</h3>
-        </div>
-        <a link-pizzaLink href="#">Click the link here!</a>
-        <p>13.99 €</p>
-    </li>
-</ul>
-
-
-Important:
-1. [VarName] should be a unique name you create for each attribute, ensuring that each field is uniquely identifiable within the HTML structure. This helps avoid conflicts and ensures accurate mapping to Adobe Experience Manager components.
-2. Return only the complete new html
-
-
-regular HTML:
-
-
+```html
 <div class="super_container">
     <header class="header d-flex flex-row">
         <div class="header_content d-flex flex-row align-items-center">
             <!-- Logo -->
             <div class="logo_container">
                 <div class="logo">
-                    <img src="images/logo.png" alt="">
+                    <img img-logo src="images/logo.png" alt="">
                     <span>course</span>
                 </div>
             </div>
@@ -115,13 +13,13 @@ regular HTML:
             <!-- Main Navigation -->
             <nav class="main_nav_container">
                 <div class="main_nav">
-                    <ul class="main_nav_list">
-                        <li class="main_nav_item"><a href="index.html">home</a></li>
-                        <li class="main_nav_item"><a href="#">about us</a></li>
-                        <li class="main_nav_item"><a href="#">courses</a></li>
-                        <li class="main_nav_item"><a href="elements.html">elements</a></li>
-                        <li class="main_nav_item"><a href="news.html">news</a></li>
-                        <li class="main_nav_item"><a href="contact.html">contact</a></li>
+                    <ul class="main_nav_list list-navigation">
+                        <li class="main_nav_item"><a link-home href="index.html">home</a></li>
+                        <li class="main_nav_item"><a link-aboutUs href="#">about us</a></li>
+                        <li class="main_nav_item"><a link-courses href="#">courses</a></li>
+                        <li class="main_nav_item"><a link-elements href="elements.html">elements</a></li>
+                        <li class="main_nav_item"><a link-news href="news.html">news</a></li>
+                        <li class="main_nav_item"><a link-contact href="contact.html">contact</a></li>
                     </ul>
                 </div>
             </nav>
@@ -149,24 +47,24 @@ regular HTML:
         <!-- Menu Items -->
         <div class="menu_inner menu_mm">
             <div class="menu menu_mm">
-                <ul class="menu_list menu_mm">
-                    <li class="menu_item menu_mm"><a href="index.html">Home</a></li>
-                    <li class="menu_item menu_mm"><a href="#">About us</a></li>
-                    <li class="menu_item menu_mm"><a href="#">Courses</a></li>
-                    <li class="menu_item menu_mm"><a href="elements.html">Elements</a></li>
-                    <li class="menu_item menu_mm"><a href="news.html">News</a></li>
-                    <li class="menu_item menu_mm"><a href="contact.html">Contact</a></li>
+                <ul class="menu_list menu_mm list-menuItems">
+                    <li class="menu_item menu_mm"><a link-homeMenu href="index.html">Home</a></li>
+                    <li class="menu_item menu_mm"><a link-aboutMenu href="#">About us</a></li>
+                    <li class="menu_item menu_mm"><a link-coursesMenu href="#">Courses</a></li>
+                    <li class="menu_item menu_mm"><a link-elementsMenu href="elements.html">Elements</a></li>
+                    <li class="menu_item menu_mm"><a link-newsMenu href="news.html">News</a></li>
+                    <li class="menu_item menu_mm"><a link-contactMenu href="contact.html">Contact</a></li>
                 </ul>
 
                 <!-- Menu Social -->
 
                 <div class="menu_social_container menu_mm">
-                    <ul class="menu_social menu_mm">
-                        <li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-pinterest"></i></a></li>
-                        <li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                        <li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-instagram"></i></a></li>
-                        <li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <ul class="menu_social menu_mm list-social">
+                        <li class="menu_social_item menu_mm"><a link-pinterest href="#"><i class="fab fa-pinterest"></i></a></li>
+                        <li class="menu_social_item menu_mm"><a link-linkedin href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li class="menu_social_item menu_mm"><a link-instagram href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li class="menu_social_item menu_mm"><a link-facebook href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="menu_social_item menu_mm"><a link-twitter href="#"><i class="fab fa-twitter"></i></a></li>
                     </ul>
                 </div>
 
@@ -184,7 +82,7 @@ regular HTML:
             <div class="home_background prlx" style="background-image:url(images/courses_background.jpg)"></div>
         </div>
         <div class="home_content">
-            <h1>Courses</h1>
+            <h1 textfield-title description="This field defines the home title">Courses</h1>
         </div>
     </div>
 
@@ -195,7 +93,7 @@ regular HTML:
             <div class="row">
                 <div class="col">
                     <div class="section_title text-center">
-                        <h1>Popular Courses</h1>
+                        <h1 textfield-popularCourses description="This field defines the popular courses title">Popular Courses</h1>
                     </div>
                 </div>
             </div>
@@ -205,14 +103,14 @@ regular HTML:
                 <!-- Popular Course Item -->
                 <div class="col-lg-4 course_box">
                     <div class="card">
-                        <img class="card-img-top" src="images/course_1.jpg" alt="https://unsplash.com/@kellybrito">
+                        <img class="card-img-top" img-courseImage src="images/course_1.jpg" alt="https://unsplash.com/@kellybrito">
                         <div class="card-body text-center">
-                            <div class="card-title"><a href="courses.html">A complete guide to design</a></div>
-                            <div class="card-text">Adobe Guide, Layes, Smart Objects etc...</div>
+                            <div class="card-title"><a link-course1 href="courses.html">A complete guide to design</a></div>
+                            <div class="card-text" textarea-courseDescription>Adobe Guide, Layes, Smart Objects etc...</div>
                         </div>
                         <div class="price_box d-flex flex-row align-items-center">
                             <div class="course_author_image">
-                                <img src="images/author.jpg" alt="https://unsplash.com/@mehdizadeh">
+                                <img img-author src="images/author.jpg" alt="https://unsplash.com/@mehdizadeh">
                             </div>
                             <div class="course_author_name">Michael Smith, <span>Author</span></div>
                             <div class="course_price d-flex flex-column align-items-center justify-content-center"><span>$29</span></div>
@@ -223,14 +121,14 @@ regular HTML:
                 <!-- Popular Course Item -->
                 <div class="col-lg-4 course_box">
                     <div class="card">
-                        <img class="card-img-top" src="images/course_2.jpg" alt="https://unsplash.com/@cikstefan">
+                        <img class="card-img-top" img-courseImage src="images/course_2.jpg" alt="https://unsplash.com/@cikstefan">
                         <div class="card-body text-center">
-                            <div class="card-title"><a href="courses.html">Beginners guide to HTML</a></div>
-                            <div class="card-text">Adobe Guide, Layes, Smart Objects etc...</div>
+                            <div class="card-title"><a link-course2 href="courses.html">Beginners guide to HTML</a></div>
+                            <div class="card-text" textarea-courseDescription>Adobe Guide, Layes, Smart Objects etc...</div>
                         </div>
                         <div class="price_box d-flex flex-row align-items-center">
                             <div class="course_author_image">
-                                <img src="images/author.jpg" alt="https://unsplash.com/@mehdizadeh">
+                                <img img-author src="images/author.jpg" alt="https://unsplash.com/@mehdizadeh">
                             </div>
                             <div class="course_author_name">Michael Smith, <span>Author</span></div>
                             <div class="course_price d-flex flex-column align-items-center justify-content-center"><span>$29</span></div>
@@ -241,14 +139,14 @@ regular HTML:
                 <!-- Popular Course Item -->
                 <div class="col-lg-4 course_box">
                     <div class="card">
-                        <img class="card-img-top" src="images/course_3.jpg" alt="https://unsplash.com/@dsmacinnes">
+                        <img class="card-img-top" img-courseImage src="images/course_3.jpg" alt="https://unsplash.com/@dsmacinnes">
                         <div class="card-body text-center">
-                            <div class="card-title"><a href="courses.html">Advanced Photoshop</a></div>
-                            <div class="card-text">Adobe Guide, Layes, Smart Objects etc...</div>
+                            <div class="card-title"><a link-course3 href="courses.html">Advanced Photoshop</a></div>
+                            <div class="card-text" textarea-courseDescription>Adobe Guide, Layes, Smart Objects etc...</div>
                         </div>
                         <div class="price_box d-flex flex-row align-items-center">
                             <div class="course_author_image">
-                                <img src="images/author.jpg" alt="https://unsplash.com/@mehdizadeh">
+                                <img img-author src="images/author.jpg" alt="https://unsplash.com/@mehdizadeh">
                             </div>
                             <div class="course_author_name">Michael Smith, <span>Author</span></div>
                             <div class="course_price d-flex flex-column align-items-center justify-content-center"><span>$29</span></div>
@@ -259,14 +157,14 @@ regular HTML:
                 <!-- Popular Course Item -->
                 <div class="col-lg-4 course_box">
                     <div class="card">
-                        <img class="card-img-top" src="images/course_4.jpg" alt="https://unsplash.com/@kellitungay">
+                        <img class="card-img-top" img-courseImage src="images/course_4.jpg" alt="https://unsplash.com/@kellitungay">
                         <div class="card-body text-center">
-                            <div class="card-title"><a href="courses.html">A complete guide to design</a></div>
-                            <div class="card-text">Adobe Guide, Layes, Smart Objects etc...</div>
+                            <div class="card-title"><a link-course4 href="courses.html">A complete guide to design</a></div>
+                            <div class="card-text" textarea-courseDescription>Adobe Guide, Layes, Smart Objects etc...</div>
                         </div>
                         <div class="price_box d-flex flex-row align-items-center">
                             <div class="course_author_image">
-                                <img src="images/author.jpg" alt="https://unsplash.com/@mehdizadeh">
+                                <img img-author src="images/author.jpg" alt="https://unsplash.com/@mehdizadeh">
                             </div>
                             <div class="course_author_name">Michael Smith, <span>Author</span></div>
                             <div class="course_price d-flex flex-column align-items-center justify-content-center"><span>$29</span></div>
@@ -277,14 +175,14 @@ regular HTML:
                 <!-- Popular Course Item -->
                 <div class="col-lg-4 course_box">
                     <div class="card">
-                        <img class="card-img-top" src="images/course_5.jpg" alt="https://unsplash.com/@claybanks1989">
+                        <img class="card-img-top" img-courseImage src="images/course_5.jpg" alt="https://unsplash.com/@claybanks1989">
                         <div class="card-body text-center">
-                            <div class="card-title"><a href="courses.html">Beginners guide to HTML</a></div>
-                            <div class="card-text">Adobe Guide, Layes, Smart Objects etc...</div>
+                            <div class="card-title"><a link-course5 href="courses.html">Beginners guide to HTML</a></div>
+                            <div class="card-text" textarea-courseDescription>Adobe Guide, Layes, Smart Objects etc...</div>
                         </div>
                         <div class="price_box d-flex flex-row align-items-center">
                             <div class="course_author_image">
-                                <img src="images/author.jpg" alt="https://unsplash.com/@mehdizadeh">
+                                <img img-author src="images/author.jpg" alt="https://unsplash.com/@mehdizadeh">
                             </div>
                             <div class="course_author_name">Michael Smith, <span>Author</span></div>
                             <div class="course_price d-flex flex-column align-items-center justify-content-center"><span>$29</span></div>
@@ -295,14 +193,14 @@ regular HTML:
                 <!-- Popular Course Item -->
                 <div class="col-lg-4 course_box">
                     <div class="card">
-                        <img class="card-img-top" src="images/course_6.jpg" alt="https://unsplash.com/@element5digital">
+                        <img class="card-img-top" img-courseImage src="images/course_6.jpg" alt="https://unsplash.com/@element5digital">
                         <div class="card-body text-center">
-                            <div class="card-title"><a href="courses.html">Advanced Photoshop</a></div>
-                            <div class="card-text">Adobe Guide, Layes, Smart Objects etc...</div>
+                            <div class="card-title"><a link-course6 href="courses.html">Advanced Photoshop</a></div>
+                            <div class="card-text" textarea-courseDescription>Adobe Guide, Layes, Smart Objects etc...</div>
                         </div>
                         <div class="price_box d-flex flex-row align-items-center">
                             <div class="course_author_image">
-                                <img src="images/author.jpg" alt="https://unsplash.com/@mehdizadeh">
+                                <img img-author src="images/author.jpg" alt="https://unsplash.com/@mehdizadeh">
                             </div>
                             <div class="course_author_name">Michael Smith, <span>Author</span></div>
                             <div class="course_price d-flex flex-column align-items-center justify-content-center"><span>$29</span></div>
@@ -313,14 +211,14 @@ regular HTML:
                 <!-- Popular Course Item -->
                 <div class="col-lg-4 course_box">
                     <div class="card">
-                        <img class="card-img-top" src="images/course_7.jpg" alt="https://unsplash.com/@gaellemm">
+                        <img class="card-img-top" img-courseImage src="images/course_7.jpg" alt="https://unsplash.com/@gaellemm">
                         <div class="card-body text-center">
-                            <div class="card-title"><a href="courses.html">A complete guide to design</a></div>
-                            <div class="card-text">Adobe Guide, Layes, Smart Objects etc...</div>
+                            <div class="card-title"><a link-course7 href="courses.html">A complete guide to design</a></div>
+                            <div class="card-text" textarea-courseDescription>Adobe Guide, Layes, Smart Objects etc...</div>
                         </div>
                         <div class="price_box d-flex flex-row align-items-center">
                             <div class="course_author_image">
-                                <img src="images/author.jpg" alt="https://unsplash.com/@mehdizadeh">
+                                <img img-author src="images/author.jpg" alt="https://unsplash.com/@mehdizadeh">
                             </div>
                             <div class="course_author_name">Michael Smith, <span>Author</span></div>
                             <div class="course_price d-flex flex-column align-items-center justify-content-center"><span>$29</span></div>
@@ -331,14 +229,14 @@ regular HTML:
                 <!-- Popular Course Item -->
                 <div class="col-lg-4 course_box">
                     <div class="card">
-                        <img class="card-img-top" src="images/course_8.jpg" alt="https://unsplash.com/@juanmramosjr">
+                        <img class="card-img-top" img-courseImage src="images/course_8.jpg" alt="https://unsplash.com/@juanmramosjr">
                         <div class="card-body text-center">
-                            <div class="card-title"><a href="courses.html">Beginners guide to HTML</a></div>
-                            <div class="card-text">Adobe Guide, Layes, Smart Objects etc...</div>
+                            <div class="card-title"><a link-course8 href="courses.html">Beginners guide to HTML</a></div>
+                            <div class="card-text" textarea-courseDescription>Adobe Guide, Layes, Smart Objects etc...</div>
                         </div>
                         <div class="price_box d-flex flex-row align-items-center">
                             <div class="course_author_image">
-                                <img src="images/author.jpg" alt="https://unsplash.com/@mehdizadeh">
+                                <img img-author src="images/author.jpg" alt="https://unsplash.com/@mehdizadeh">
                             </div>
                             <div class="course_author_name">Michael Smith, <span>Author</span></div>
                             <div class="course_price d-flex flex-column align-items-center justify-content-center"><span>$29</span></div>
@@ -349,14 +247,14 @@ regular HTML:
                 <!-- Popular Course Item -->
                 <div class="col-lg-4 course_box">
                     <div class="card">
-                        <img class="card-img-top" src="images/course_9.jpg" alt="https://unsplash.com/@kimberlyfarmer">
+                        <img class="card-img-top" img-courseImage src="images/course_9.jpg" alt="https://unsplash.com/@kimberlyfarmer">
                         <div class="card-body text-center">
-                            <div class="card-title"><a href="courses.html">Advanced Photoshop</a></div>
-                            <div class="card-text">Adobe Guide, Layes, Smart Objects etc...</div>
+                            <div class="card-title"><a link-course9 href="courses.html">Advanced Photoshop</a></div>
+                            <div class="card-text" textarea-courseDescription>Adobe Guide, Layes, Smart Objects etc...</div>
                         </div>
                         <div class="price_box d-flex flex-row align-items-center">
                             <div class="course_author_image">
-                                <img src="images/author.jpg" alt="https://unsplash.com/@mehdizadeh">
+                                <img img-author src="images/author.jpg" alt="https://unsplash.com/@mehdizadeh">
                             </div>
                             <div class="course_author_name">Michael Smith, <span>Author</span></div>
                             <div class="course_price d-flex flex-column align-items-center justify-content-center"><span>$29</span></div>
@@ -373,7 +271,7 @@ regular HTML:
                 <div class="row">
                     <div class="col">
                         <div class="section_title text-center">
-                            <h1>Subscribe to newsletter</h1>
+                            <h1 textfield-newsletterTitle description="This field defines the newsletter title">Subscribe to newsletter</h1>
                         </div>
                     </div>
                 </div>
@@ -382,8 +280,8 @@ regular HTML:
                         <div class="newsletter_form_container mx-auto">
                             <form action="post">
                                 <div class="newsletter_form d-flex flex-md-row flex-column flex-xs-column align-items-center justify-content-center">
-                                    <input id="newsletter_email" class="newsletter_email" type="email" placeholder="Email Address" required="required" data-error="Valid email is required.">
-                                    <button id="newsletter_submit" type="submit" class="newsletter_submit_btn trans_300" value="Submit">Subscribe</button>
+                                    <input id="newsletter_email" class="newsletter_email" textfield-newsletterEmail type="email" placeholder="Email Address" required="required" data-error="Valid email is required.">
+                                    <button id="newsletter_submit" type="submit" class="newsletter_submit_btn trans_300" value="Submit" button-submit>Subscribe</button>
                                 </div>
                             </form>
                         </div>
@@ -395,42 +293,42 @@ regular HTML:
                     <div class="col-lg-3 footer_col">
                         <div class="logo_container">
                             <div class="logo">
-                                <img src="images/logo.png" alt="">
+                                <img img-logo src="images/logo.png" alt="">
                                 <span>course</span>
                             </div>
                         </div>
-                        <p class="footer_about_text">In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum, tempor lacus.</p>
+                        <p class="footer_about_text" textarea-footerDescription>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum, tempor lacus.</p>
                     </div>
                     <div class="col-lg-3 footer_col">
-                        <div class="footer_column_title">Menu</div>
+                        <div class="footer_column_title" textfield-menuTitle description="This field defines the footer menu title">Menu</div>
                         <div class="footer_column_content">
-                            <ul>
-                                <li class="footer_list_item"><a href="index.html">Home</a></li>
-                                <li class="footer_list_item"><a href="#">About Us</a></li>
-                                <li class="footer_list_item"><a href="#">Courses</a></li>
-                                <li class="footer_list_item"><a href="news.html">News</a></li>
-                                <li class="footer_list_item"><a href="contact.html">Contact</a></li>
+                            <ul class="list-footerMenu">
+                                <li class="footer_list_item"><a link-homeFooter href="index.html">Home</a></li>
+                                <li class="footer_list_item"><a link-aboutFooter href="#">About Us</a></li>
+                                <li class="footer_list_item"><a link-coursesFooter href="#">Courses</a></li>
+                                <li class="footer_list_item"><a link-newsFooter href="news.html">News</a></li>
+                                <li class="footer_list_item"><a link-contactFooter href="contact.html">Contact</a></li>
                             </ul>
                         </div>
                     </div>
                     <!-- Footer Column - Usefull Links -->
                     <div class="col-lg-3 footer_col">
-                        <div class="footer_column_title">Usefull Links</div>
+                        <div class="footer_column_title" textfield-usefulLinksTitle description="This field defines the useful links footer title">Usefull Links</div>
                         <div class="footer_column_content">
-                            <ul>
-                                <li class="footer_list_item"><a href="#">Testimonials</a></li>
-                                <li class="footer_list_item"><a href="#">FAQ</a></li>
-                                <li class="footer_list_item"><a href="#">Community</a></li>
-                                <li class="footer_list_item"><a href="#">Campus Pictures</a></li>
-                                <li class="footer_list_item"><a href="#">Tuitions</a></li>
+                            <ul class="list-usefulLinks">
+                                <li class="footer_list_item"><a link-testimonials href="#">Testimonials</a></li>
+                                <li class="footer_list_item"><a link-faq href="#">FAQ</a></li>
+                                <li class="footer_list_item"><a link-community href="#">Community</a></li>
+                                <li class="footer_list_item"><a link-campusPictures href="#">Campus Pictures</a></li>
+                                <li class="footer_list_item"><a link-tuitions href="#">Tuitions</a></li>
                             </ul>
                         </div>
                     </div>
                     <!-- Footer Column - Contact -->
                     <div class="col-lg-3 footer_col">
-                        <div class="footer_column_title">Contact</div>
+                        <div class="footer_column_title" textfield-contactTitle description="This field defines the footer contact title">Contact</div>
                         <div class="footer_column_content">
-                            <ul>
+                            <ul class="list-footerContact">
                                 <li class="footer_contact_item">
                                     <div class="footer_contact_icon">
                                         <img src="images/placeholder.svg" alt="https://www.flaticon.com/authors/lucy-g">
@@ -456,34 +354,31 @@ regular HTML:
             </div>
             <div class="footer_bar d-flex flex-column flex-sm-row align-items-center">
                 <div class="footer_copyright">
-                    <p class="footer_about_text">In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum, tempor lacus.</p>
+                    <p class="footer_about_text" textarea-footerCopyright>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum, tempor lacus.</p>
                 </div>
                 <div class="subscription_options">
                     <div>
                         <p>Preferences:</p>
                         <div>
-                            <p>Email Updates: Enabled</p>
+                            <p>Digital Newsletter: <span checkbox-newsletter>Enabled</span></p>
                         </div>
                         <div>
-                            <p>SMS Notifications: Disabled</p>
+                            <p>SMS Notifications: <span checkbox-sms>Disabled</span></p>
                         </div>
                     </div>
                 </div>
                 <div class="footer_social ml-sm-auto">
-                    <ul class="menu_social">
-                        <li class="menu_social_item"><a href="#"><i class="fab fa-pinterest"></i></a></li>
-                        <li class="menu_social_item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                        <li class="menu_social_item"><a href="#"><i class="fab fa-instagram"></i></a></li>
-                        <li class="menu_social_item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li class="menu_social_item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <ul class="menu_social list-footerSocial">
+                        <li class="menu_social_item"><a link-pinterestFooter href="#"><i class="fab fa-pinterest"></i></a></li>
+                        <li class="menu_social_item"><a link-linkedinFooter href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li class="menu_social_item"><a link-instagramFooter href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li class="menu_social_item"><a link-facebookFooter href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="menu_social_item"><a link-twitterFooter href="#"><i class="fab fa-twitter"></i></a></li>
                     </ul>
                 </div>
             </div>
 
         </div>
     </footer>
-
 </div>
-
-
-
+```

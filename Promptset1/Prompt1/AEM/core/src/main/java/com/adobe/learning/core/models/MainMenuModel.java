@@ -25,17 +25,6 @@ public class MainMenuModel{
     
     
             
-    @ValueMapValue(name="aboutLink")
-    @Inject
-    protected String aboutLink;
-
-    @ValueMapValue(name="aboutLinkCheckbox")
-    @Inject
-    protected Boolean aboutLinkCheckbox;
-    
-    
-    
-            
     @ValueMapValue(name="servicesLink")
     @Inject
     protected String servicesLink;

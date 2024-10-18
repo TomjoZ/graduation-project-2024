@@ -9,506 +9,482 @@
             jcr:primaryType="nt:unstructured"
             sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
         <items jcr:primaryType="nt:unstructured">
-                        <tabs
+                        <column
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="granite/ui/components/coral/foundation/tabs"
-                    maximized="{Boolean}true">
+                    sling:resourceType="granite/ui/components/coral/foundation/container">
                 <items jcr:primaryType="nt:unstructured">
-                                        <Test
-                            jcr:primaryType="nt:unstructured"
-                            jcr:title="Test Tab"
-                            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
-                            margin="{Boolean}true">
-                    <items jcr:primaryType="nt:unstructured">
-                                                    <column
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="granite/ui/components/coral/foundation/container">
-                                <items jcr:primaryType="nt:unstructured">
-                                    
-                                        <logoText
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                        fieldLabel="logoText"
-                                        name="./logoText"
-                                                                                                                            fieldDescription="This field defines the logo text"                                        />
-                                    
-                                        <carouselTitle1
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                        fieldLabel="carouselTitle1"
-                                        name="./carouselTitle1"
-                                                                                                                            fieldDescription="This is the title for the first carousel item"                                        />
-                                    
-                                        <carouselDescription1
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
-                                        fieldLabel="carouselDescription1"
-                                        name="./carouselDescription1"
-                                                                                                                            fieldDescription="This is the description for the first carousel item"                                        />
-                                    
-                                        <carouselTitle2
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                        fieldLabel="carouselTitle2"
-                                        name="./carouselTitle2"
-                                                                                                                            fieldDescription="This is the title for the second carousel item"                                        />
-                                    
-                                        <carouselDescription2
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
-                                        fieldLabel="carouselDescription2"
-                                        name="./carouselDescription2"
-                                                                                                                            fieldDescription="This is the description for the second carousel item"                                        />
-                                    
-                                        <carouselTitle3
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                        fieldLabel="carouselTitle3"
-                                        name="./carouselTitle3"
-                                                                                                                            fieldDescription="This is the title for the third carousel item"                                        />
-                                    
-                                        <carouselDescription3
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
-                                        fieldLabel="carouselDescription3"
-                                        name="./carouselDescription3"
-                                                                                                                            fieldDescription="This is the description for the third carousel item"                                        />
-                                    
-                                        <carouselTitle4
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                        fieldLabel="carouselTitle4"
-                                        name="./carouselTitle4"
-                                                                                                                            fieldDescription="This is the title for the fourth carousel item"                                        />
-                                    
-                                        <carouselDescription4
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
-                                        fieldLabel="carouselDescription4"
-                                        name="./carouselDescription4"
-                                                                                                                            fieldDescription="This is the description for the fourth carousel item"                                        />
-                                    
-                                        <carouselTitle5
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                        fieldLabel="carouselTitle5"
-                                        name="./carouselTitle5"
-                                                                                                                            fieldDescription="This is the title for the fifth carousel item"                                        />
-                                    
-                                        <carouselDescription5
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
-                                        fieldLabel="carouselDescription5"
-                                        name="./carouselDescription5"
-                                                                                                                            fieldDescription="This is the description for the fifth carousel item"                                        />
-                                    
-                                                                        
-                                        <carouselImage1
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
-                                        autoStart="{Boolean}false"
-                                        class="cq-droptarget"
-                                        fieldLabel="carouselImage1"
-                                        fileNameParameter="./carouselImage1Name"
-                                        fileReferenceParameter="./carouselImage1Reference"
-                                                                                    fieldDescription="This is the first carousel image"                                        mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
-                                        multiple="{Boolean}false"
-                                        name="./carouselImage1"
-                                        title="Image"
-                                        uploadUrl="${suffix.path}"
-                                        useHTML5="{Boolean}true"/>
-                                    
-                                        <carouselImage2
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
-                                        autoStart="{Boolean}false"
-                                        class="cq-droptarget"
-                                        fieldLabel="carouselImage2"
-                                        fileNameParameter="./carouselImage2Name"
-                                        fileReferenceParameter="./carouselImage2Reference"
-                                                                                    fieldDescription="This is the second carousel image"                                        mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
-                                        multiple="{Boolean}false"
-                                        name="./carouselImage2"
-                                        title="Image"
-                                        uploadUrl="${suffix.path}"
-                                        useHTML5="{Boolean}true"/>
-                                    
-                                        <carouselImage3
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
-                                        autoStart="{Boolean}false"
-                                        class="cq-droptarget"
-                                        fieldLabel="carouselImage3"
-                                        fileNameParameter="./carouselImage3Name"
-                                        fileReferenceParameter="./carouselImage3Reference"
-                                                                                    fieldDescription="This is the third carousel image"                                        mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
-                                        multiple="{Boolean}false"
-                                        name="./carouselImage3"
-                                        title="Image"
-                                        uploadUrl="${suffix.path}"
-                                        useHTML5="{Boolean}true"/>
-                                    
-                                    
-                                    
-                                        <carouselCTA1Container
-                                                jcr:primaryType="nt:unstructured"
-                                                jcr:title="carouselCTA1 Container"
-                                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
-                                            <items jcr:primaryType="nt:unstructured">
-                                                <carouselCTA1Checkbox
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
-                                                text="Open link in another tab."
-                                                                                                    fieldDescription="This is the call-to-action button for the first carousel item"                                                name="./carouselCTA1Checkbox"
-                                                value="true"/>
-                                                <carouselCTA1
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                                                fieldLabel="carouselCTA1"
-                                                name="./carouselCTA1"
-                                                required="{Boolean}false"
-                                                rootPath="/content"/>
-                                            </items>
-                                        </carouselCTA1Container>
-                                    
-                                        <carouselCTA2Container
-                                                jcr:primaryType="nt:unstructured"
-                                                jcr:title="carouselCTA2 Container"
-                                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
-                                            <items jcr:primaryType="nt:unstructured">
-                                                <carouselCTA2Checkbox
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
-                                                text="Open link in another tab."
-                                                                                                    fieldDescription="This is the call-to-action button for the second carousel item"                                                name="./carouselCTA2Checkbox"
-                                                value="true"/>
-                                                <carouselCTA2
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                                                fieldLabel="carouselCTA2"
-                                                name="./carouselCTA2"
-                                                required="{Boolean}false"
-                                                rootPath="/content"/>
-                                            </items>
-                                        </carouselCTA2Container>
-                                    
-                                        <carouselCTA3Container
-                                                jcr:primaryType="nt:unstructured"
-                                                jcr:title="carouselCTA3 Container"
-                                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
-                                            <items jcr:primaryType="nt:unstructured">
-                                                <carouselCTA3Checkbox
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
-                                                text="Open link in another tab."
-                                                                                                    fieldDescription="This is the call-to-action button for the third carousel item"                                                name="./carouselCTA3Checkbox"
-                                                value="true"/>
-                                                <carouselCTA3
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                                                fieldLabel="carouselCTA3"
-                                                name="./carouselCTA3"
-                                                required="{Boolean}false"
-                                                rootPath="/content"/>
-                                            </items>
-                                        </carouselCTA3Container>
-                                    
-                                        <carouselCTA4Container
-                                                jcr:primaryType="nt:unstructured"
-                                                jcr:title="carouselCTA4 Container"
-                                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
-                                            <items jcr:primaryType="nt:unstructured">
-                                                <carouselCTA4Checkbox
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
-                                                text="Open link in another tab."
-                                                                                                    fieldDescription="This is the call-to-action button for the fourth carousel item"                                                name="./carouselCTA4Checkbox"
-                                                value="true"/>
-                                                <carouselCTA4
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                                                fieldLabel="carouselCTA4"
-                                                name="./carouselCTA4"
-                                                required="{Boolean}false"
-                                                rootPath="/content"/>
-                                            </items>
-                                        </carouselCTA4Container>
-                                    
-                                        <carouselCTA5Container
-                                                jcr:primaryType="nt:unstructured"
-                                                jcr:title="carouselCTA5 Container"
-                                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
-                                            <items jcr:primaryType="nt:unstructured">
-                                                <carouselCTA5Checkbox
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
-                                                text="Open link in another tab."
-                                                                                                    fieldDescription="This is the call-to-action button for the fifth carousel item"                                                name="./carouselCTA5Checkbox"
-                                                value="true"/>
-                                                <carouselCTA5
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                                                fieldLabel="carouselCTA5"
-                                                name="./carouselCTA5"
-                                                required="{Boolean}false"
-                                                rootPath="/content"/>
-                                            </items>
-                                        </carouselCTA5Container>
-                                    
-                                                                    
-                                    <mainMenuModelList
-                                            jcr:primaryType="nt:unstructured"
-                                            sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
-                                            fieldLabel="mainMenuModel"
-                                                                                        fieldDescription="This list contains the main menu items"
-                                            composite="{Boolean}true">
-                                        <field jcr:primaryType="nt:unstructured"
-                                               sling:resourceType="granite/ui/components/coral/foundation/container"
-                                               name="./mainMenuModel">
-                                            <items jcr:primaryType="nt:unstructured">
-                                                                                                                                                                                                                <homeLinkContainer
-                                                                jcr:primaryType="nt:unstructured"
-                                                                jcr:title="homeLink Container"
-                                                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
-                                                            <items jcr:primaryType="nt:unstructured">
-                                                                <homeLinkCheckbox
-                                                                jcr:primaryType="nt:unstructured"
-                                                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
-                                                                text="Open link in another tab."
-                                                                                                                                name="./homeLinkCheckbox"
-                                                                value="true"/>
-                                                                <homeLink
-                                                                jcr:primaryType="nt:unstructured"
-                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                                                                fieldLabel="homeLink"
-                                                                name="./homeLink"
-                                                                required="{Boolean}false"
-                                                                rootPath="/content"/>
-                                                            </items>
-                                                        </homeLinkContainer>
-                                                                                                                                                                                                                                                                                                                                                                                                                                <aboutLinkContainer
-                                                                jcr:primaryType="nt:unstructured"
-                                                                jcr:title="aboutLink Container"
-                                                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
-                                                            <items jcr:primaryType="nt:unstructured">
-                                                                <aboutLinkCheckbox
-                                                                jcr:primaryType="nt:unstructured"
-                                                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
-                                                                text="Open link in another tab."
-                                                                                                                                name="./aboutLinkCheckbox"
-                                                                value="true"/>
-                                                                <aboutLink
-                                                                jcr:primaryType="nt:unstructured"
-                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                                                                fieldLabel="aboutLink"
-                                                                name="./aboutLink"
-                                                                required="{Boolean}false"
-                                                                rootPath="/content"/>
-                                                            </items>
-                                                        </aboutLinkContainer>
-                                                                                                                                                                                                                                                                                                                                                                                                                                <servicesLinkContainer
-                                                                jcr:primaryType="nt:unstructured"
-                                                                jcr:title="servicesLink Container"
-                                                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
-                                                            <items jcr:primaryType="nt:unstructured">
-                                                                <servicesLinkCheckbox
-                                                                jcr:primaryType="nt:unstructured"
-                                                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
-                                                                text="Open link in another tab."
-                                                                                                                                name="./servicesLinkCheckbox"
-                                                                value="true"/>
-                                                                <servicesLink
-                                                                jcr:primaryType="nt:unstructured"
-                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                                                                fieldLabel="servicesLink"
-                                                                name="./servicesLink"
-                                                                required="{Boolean}false"
-                                                                rootPath="/content"/>
-                                                            </items>
-                                                        </servicesLinkContainer>
-                                                                                                                                                                                                                                                                                                                                                                                                                                <portfolioLinkContainer
-                                                                jcr:primaryType="nt:unstructured"
-                                                                jcr:title="portfolioLink Container"
-                                                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
-                                                            <items jcr:primaryType="nt:unstructured">
-                                                                <portfolioLinkCheckbox
-                                                                jcr:primaryType="nt:unstructured"
-                                                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
-                                                                text="Open link in another tab."
-                                                                                                                                name="./portfolioLinkCheckbox"
-                                                                value="true"/>
-                                                                <portfolioLink
-                                                                jcr:primaryType="nt:unstructured"
-                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                                                                fieldLabel="portfolioLink"
-                                                                name="./portfolioLink"
-                                                                required="{Boolean}false"
-                                                                rootPath="/content"/>
-                                                            </items>
-                                                        </portfolioLinkContainer>
-                                                                                                                                                                                                                                                                                                                                                                                                                                <teamLinkContainer
-                                                                jcr:primaryType="nt:unstructured"
-                                                                jcr:title="teamLink Container"
-                                                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
-                                                            <items jcr:primaryType="nt:unstructured">
-                                                                <teamLinkCheckbox
-                                                                jcr:primaryType="nt:unstructured"
-                                                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
-                                                                text="Open link in another tab."
-                                                                                                                                name="./teamLinkCheckbox"
-                                                                value="true"/>
-                                                                <teamLink
-                                                                jcr:primaryType="nt:unstructured"
-                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                                                                fieldLabel="teamLink"
-                                                                name="./teamLink"
-                                                                required="{Boolean}false"
-                                                                rootPath="/content"/>
-                                                            </items>
-                                                        </teamLinkContainer>
-                                                                                                                                                                                                                                                                                                                                                                                                                                <dropdownLinkContainer
-                                                                jcr:primaryType="nt:unstructured"
-                                                                jcr:title="dropdownLink Container"
-                                                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
-                                                            <items jcr:primaryType="nt:unstructured">
-                                                                <dropdownLinkCheckbox
-                                                                jcr:primaryType="nt:unstructured"
-                                                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
-                                                                text="Open link in another tab."
-                                                                                                                                name="./dropdownLinkCheckbox"
-                                                                value="true"/>
-                                                                <dropdownLink
-                                                                jcr:primaryType="nt:unstructured"
-                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                                                                fieldLabel="dropdownLink"
-                                                                name="./dropdownLink"
-                                                                required="{Boolean}false"
-                                                                rootPath="/content"/>
-                                                            </items>
-                                                        </dropdownLinkContainer>
-                                                                                                                                                                                                                                                                                                                                                                                                                                <contactLinkContainer
-                                                                jcr:primaryType="nt:unstructured"
-                                                                jcr:title="contactLink Container"
-                                                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
-                                                            <items jcr:primaryType="nt:unstructured">
-                                                                <contactLinkCheckbox
-                                                                jcr:primaryType="nt:unstructured"
-                                                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
-                                                                text="Open link in another tab."
-                                                                                                                                name="./contactLinkCheckbox"
-                                                                value="true"/>
-                                                                <contactLink
-                                                                jcr:primaryType="nt:unstructured"
-                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                                                                fieldLabel="contactLink"
-                                                                name="./contactLink"
-                                                                required="{Boolean}false"
-                                                                rootPath="/content"/>
-                                                            </items>
-                                                        </contactLinkContainer>
-                                                                                                                                                                                                                                                                                    </items>
-                    </field>
-                    </mainMenuModelList>
                     
-                                    <dropdownMenuModelList
-                                            jcr:primaryType="nt:unstructured"
-                                            sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
-                                            fieldLabel="dropdownMenuModel"
-                                                                                        fieldDescription="This list contains dropdown menu items"
-                                            composite="{Boolean}true">
-                                        <field jcr:primaryType="nt:unstructured"
-                                               sling:resourceType="granite/ui/components/coral/foundation/container"
-                                               name="./dropdownMenuModel">
+                        <logoText
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="logoText"
+                        name="./logoText"
+                        value="logoText"
+                                                                            fieldDescription="This field defines the logo text"                        />
+                    
+                        <carouselTitle1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="carouselTitle1"
+                        name="./carouselTitle1"
+                        value="carouselTitle1"
+                                                                            fieldDescription="This is the title for the first carousel item"                        />
+                    
+                        <carouselDescription1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                        fieldLabel="carouselDescription1"
+                        name="./carouselDescription1"
+                        value="carouselDescription1"
+                                                                            fieldDescription="This is the description for the first carousel item"                        />
+                    
+                        <carouselTitle2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="carouselTitle2"
+                        name="./carouselTitle2"
+                        value="carouselTitle2"
+                                                                            fieldDescription="This is the title for the second carousel item"                        />
+                    
+                        <carouselDescription2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                        fieldLabel="carouselDescription2"
+                        name="./carouselDescription2"
+                        value="carouselDescription2"
+                                                                            fieldDescription="This is the description for the second carousel item"                        />
+                    
+                        <carouselTitle3
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="carouselTitle3"
+                        name="./carouselTitle3"
+                        value="carouselTitle3"
+                                                                            fieldDescription="This is the title for the third carousel item"                        />
+                    
+                        <carouselDescription3
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                        fieldLabel="carouselDescription3"
+                        name="./carouselDescription3"
+                        value="carouselDescription3"
+                                                                            fieldDescription="This is the description for the third carousel item"                        />
+                    
+                        <carouselTitle4
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="carouselTitle4"
+                        name="./carouselTitle4"
+                        value="carouselTitle4"
+                                                                            fieldDescription="This is the title for the fourth carousel item"                        />
+                    
+                        <carouselDescription4
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                        fieldLabel="carouselDescription4"
+                        name="./carouselDescription4"
+                        value="carouselDescription4"
+                                                                            fieldDescription="This is the description for the fourth carousel item"                        />
+                    
+                        <carouselTitle5
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="carouselTitle5"
+                        name="./carouselTitle5"
+                        value="carouselTitle5"
+                                                                            fieldDescription="This is the title for the fifth carousel item"                        />
+                    
+                        <carouselDescription5
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                        fieldLabel="carouselDescription5"
+                        name="./carouselDescription5"
+                        value="carouselDescription5"
+                                                                            fieldDescription="This is the description for the fifth carousel item"                        />
+                    
+                                        
+                        <carouselImage1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                        autoStart="{Boolean}false"
+                        class="cq-droptarget"
+                        fieldLabel="carouselImage1"
+                        fileNameParameter="./carouselImage1Name"
+                        fileReferenceParameter="./carouselImage1Reference"
+                        mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                        multiple="{Boolean}false"
+                        name="./carouselImage1"
+                        title="Image"
+                        uploadUrl="${suffix.path}"
+                        useHTML5="{Boolean}true"/>
+                    
+                        <carouselImage2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                        autoStart="{Boolean}false"
+                        class="cq-droptarget"
+                        fieldLabel="carouselImage2"
+                        fileNameParameter="./carouselImage2Name"
+                        fileReferenceParameter="./carouselImage2Reference"
+                        mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                        multiple="{Boolean}false"
+                        name="./carouselImage2"
+                        title="Image"
+                        uploadUrl="${suffix.path}"
+                        useHTML5="{Boolean}true"/>
+                    
+                        <carouselImage3
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                        autoStart="{Boolean}false"
+                        class="cq-droptarget"
+                        fieldLabel="carouselImage3"
+                        fileNameParameter="./carouselImage3Name"
+                        fileReferenceParameter="./carouselImage3Reference"
+                        mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                        multiple="{Boolean}false"
+                        name="./carouselImage3"
+                        title="Image"
+                        uploadUrl="${suffix.path}"
+                        useHTML5="{Boolean}true"/>
+                    
+                    
+                    
+                        <carouselCTA1Container
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="carouselCTA1 Container"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <carouselCTA1Checkbox
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                text="Open link in another tab."
+                                                                fieldDescription="This is the call-to-action button for the first carousel item"                                name="./carouselCTA1Checkbox"
+                                value="true"/>
+                                <carouselCTA1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="carouselCTA1"
+                                name="./carouselCTA1"
+                                required="{Boolean}false"
+                                rootPath="/content"/>
+                            </items>
+                        </carouselCTA1Container>
+                    
+                        <carouselCTA2Container
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="carouselCTA2 Container"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <carouselCTA2Checkbox
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                text="Open link in another tab."
+                                                                fieldDescription="This is the call-to-action button for the second carousel item"                                name="./carouselCTA2Checkbox"
+                                value="true"/>
+                                <carouselCTA2
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="carouselCTA2"
+                                name="./carouselCTA2"
+                                required="{Boolean}false"
+                                rootPath="/content"/>
+                            </items>
+                        </carouselCTA2Container>
+                    
+                        <carouselCTA3Container
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="carouselCTA3 Container"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <carouselCTA3Checkbox
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                text="Open link in another tab."
+                                                                fieldDescription="This is the call-to-action button for the third carousel item"                                name="./carouselCTA3Checkbox"
+                                value="true"/>
+                                <carouselCTA3
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="carouselCTA3"
+                                name="./carouselCTA3"
+                                required="{Boolean}false"
+                                rootPath="/content"/>
+                            </items>
+                        </carouselCTA3Container>
+                    
+                        <carouselCTA4Container
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="carouselCTA4 Container"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <carouselCTA4Checkbox
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                text="Open link in another tab."
+                                                                fieldDescription="This is the call-to-action button for the fourth carousel item"                                name="./carouselCTA4Checkbox"
+                                value="true"/>
+                                <carouselCTA4
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="carouselCTA4"
+                                name="./carouselCTA4"
+                                required="{Boolean}false"
+                                rootPath="/content"/>
+                            </items>
+                        </carouselCTA4Container>
+                    
+                        <carouselCTA5Container
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="carouselCTA5 Container"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <carouselCTA5Checkbox
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                text="Open link in another tab."
+                                                                fieldDescription="This is the call-to-action button for the fifth carousel item"                                name="./carouselCTA5Checkbox"
+                                value="true"/>
+                                <carouselCTA5
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="carouselCTA5"
+                                name="./carouselCTA5"
+                                required="{Boolean}false"
+                                rootPath="/content"/>
+                            </items>
+                        </carouselCTA5Container>
+                    
+                                    
+                    <mainMenuModelList
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                            fieldLabel="mainMenuModel"
+                                                        fieldDescription="This list contains the main menu items"
+                            composite="{Boolean}true">
+                        <field jcr:primaryType="nt:unstructured"
+                               sling:resourceType="granite/ui/components/coral/foundation/container"
+                               name="./mainMenuModel">
+                            <items jcr:primaryType="nt:unstructured">
+                                                                                                                                                <homeLinkContainer
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="homeLink Container"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
                                             <items jcr:primaryType="nt:unstructured">
-                                                                                                                                                                                                                <dropdown1Container
-                                                                jcr:primaryType="nt:unstructured"
-                                                                jcr:title="dropdown1 Container"
-                                                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
-                                                            <items jcr:primaryType="nt:unstructured">
-                                                                <dropdown1Checkbox
-                                                                jcr:primaryType="nt:unstructured"
-                                                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
-                                                                text="Open link in another tab."
-                                                                                                                                name="./dropdown1Checkbox"
-                                                                value="true"/>
-                                                                <dropdown1
-                                                                jcr:primaryType="nt:unstructured"
-                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                                                                fieldLabel="dropdown1"
-                                                                name="./dropdown1"
-                                                                required="{Boolean}false"
-                                                                rootPath="/content"/>
-                                                            </items>
-                                                        </dropdown1Container>
-                                                                                                                                                                                                                                                                                                                                                                                                                                <dropdown3Container
-                                                                jcr:primaryType="nt:unstructured"
-                                                                jcr:title="dropdown3 Container"
-                                                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
-                                                            <items jcr:primaryType="nt:unstructured">
-                                                                <dropdown3Checkbox
-                                                                jcr:primaryType="nt:unstructured"
-                                                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
-                                                                text="Open link in another tab."
-                                                                                                                                name="./dropdown3Checkbox"
-                                                                value="true"/>
-                                                                <dropdown3
-                                                                jcr:primaryType="nt:unstructured"
-                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                                                                fieldLabel="dropdown3"
-                                                                name="./dropdown3"
-                                                                required="{Boolean}false"
-                                                                rootPath="/content"/>
-                                                            </items>
-                                                        </dropdown3Container>
-                                                                                                                                                                                                                                                                                                                                                                                                                                <dropdown4Container
-                                                                jcr:primaryType="nt:unstructured"
-                                                                jcr:title="dropdown4 Container"
-                                                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
-                                                            <items jcr:primaryType="nt:unstructured">
-                                                                <dropdown4Checkbox
-                                                                jcr:primaryType="nt:unstructured"
-                                                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
-                                                                text="Open link in another tab."
-                                                                                                                                name="./dropdown4Checkbox"
-                                                                value="true"/>
-                                                                <dropdown4
-                                                                jcr:primaryType="nt:unstructured"
-                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                                                                fieldLabel="dropdown4"
-                                                                name="./dropdown4"
-                                                                required="{Boolean}false"
-                                                                rootPath="/content"/>
-                                                            </items>
-                                                        </dropdown4Container>
-                                                                                                                                                                                                                                                                                                                                                                                                                                <dropdown5Container
-                                                                jcr:primaryType="nt:unstructured"
-                                                                jcr:title="dropdown5 Container"
-                                                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
-                                                            <items jcr:primaryType="nt:unstructured">
-                                                                <dropdown5Checkbox
-                                                                jcr:primaryType="nt:unstructured"
-                                                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
-                                                                text="Open link in another tab."
-                                                                                                                                name="./dropdown5Checkbox"
-                                                                value="true"/>
-                                                                <dropdown5
-                                                                jcr:primaryType="nt:unstructured"
-                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                                                                fieldLabel="dropdown5"
-                                                                name="./dropdown5"
-                                                                required="{Boolean}false"
-                                                                rootPath="/content"/>
-                                                            </items>
-                                                        </dropdown5Container>
-                                                                                                                                                                                                                                                                                    </items>
-                    </field>
-                    </dropdownMenuModelList>
-                                    </items>
-                </column>
+                                                <homeLinkCheckbox
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                text="Open link in another tab."
+                                                                                                name="./homeLinkCheckbox"
+                                                value="true"/>
+                                                <homeLink
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldLabel="homeLink"
+                                                name="./homeLink"
+                                                required="{Boolean}false"
+                                                rootPath="/content"/>
                                             </items>
-                    </Test>
-                                    </items>
-            </tabs>
+                                        </homeLinkContainer>
+                                                                                                                                                                                                                                                                                                <servicesLinkContainer
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="servicesLink Container"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <servicesLinkCheckbox
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                text="Open link in another tab."
+                                                                                                name="./servicesLinkCheckbox"
+                                                value="true"/>
+                                                <servicesLink
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldLabel="servicesLink"
+                                                name="./servicesLink"
+                                                required="{Boolean}false"
+                                                rootPath="/content"/>
+                                            </items>
+                                        </servicesLinkContainer>
+                                                                                                                                                                                                                                                                                                <portfolioLinkContainer
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="portfolioLink Container"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <portfolioLinkCheckbox
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                text="Open link in another tab."
+                                                                                                name="./portfolioLinkCheckbox"
+                                                value="true"/>
+                                                <portfolioLink
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldLabel="portfolioLink"
+                                                name="./portfolioLink"
+                                                required="{Boolean}false"
+                                                rootPath="/content"/>
+                                            </items>
+                                        </portfolioLinkContainer>
+                                                                                                                                                                                                                                                                                                <teamLinkContainer
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="teamLink Container"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <teamLinkCheckbox
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                text="Open link in another tab."
+                                                                                                name="./teamLinkCheckbox"
+                                                value="true"/>
+                                                <teamLink
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldLabel="teamLink"
+                                                name="./teamLink"
+                                                required="{Boolean}false"
+                                                rootPath="/content"/>
+                                            </items>
+                                        </teamLinkContainer>
+                                                                                                                                                                                                                                                                                                <dropdownLinkContainer
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="dropdownLink Container"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <dropdownLinkCheckbox
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                text="Open link in another tab."
+                                                                                                name="./dropdownLinkCheckbox"
+                                                value="true"/>
+                                                <dropdownLink
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldLabel="dropdownLink"
+                                                name="./dropdownLink"
+                                                required="{Boolean}false"
+                                                rootPath="/content"/>
+                                            </items>
+                                        </dropdownLinkContainer>
+                                                                                                                                                                                                                                                                                                <contactLinkContainer
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="contactLink Container"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <contactLinkCheckbox
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                text="Open link in another tab."
+                                                                                                name="./contactLinkCheckbox"
+                                                value="true"/>
+                                                <contactLink
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldLabel="contactLink"
+                                                name="./contactLink"
+                                                required="{Boolean}false"
+                                                rootPath="/content"/>
+                                            </items>
+                                        </contactLinkContainer>
+                                                                                                                                                                                                            </items>
+                        </field>
+                    </mainMenuModelList>
+                
+                    <dropdownMenuModelList
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                            fieldLabel="dropdownMenuModel"
+                                                        fieldDescription="This list contains dropdown menu items"
+                            composite="{Boolean}true">
+                        <field jcr:primaryType="nt:unstructured"
+                               sling:resourceType="granite/ui/components/coral/foundation/container"
+                               name="./dropdownMenuModel">
+                            <items jcr:primaryType="nt:unstructured">
+                                                                                                                                                <dropdown1Container
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="dropdown1 Container"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <dropdown1Checkbox
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                text="Open link in another tab."
+                                                                                                name="./dropdown1Checkbox"
+                                                value="true"/>
+                                                <dropdown1
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldLabel="dropdown1"
+                                                name="./dropdown1"
+                                                required="{Boolean}false"
+                                                rootPath="/content"/>
+                                            </items>
+                                        </dropdown1Container>
+                                                                                                                                                                                                                                                                                                <dropdown3Container
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="dropdown3 Container"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <dropdown3Checkbox
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                text="Open link in another tab."
+                                                                                                name="./dropdown3Checkbox"
+                                                value="true"/>
+                                                <dropdown3
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldLabel="dropdown3"
+                                                name="./dropdown3"
+                                                required="{Boolean}false"
+                                                rootPath="/content"/>
+                                            </items>
+                                        </dropdown3Container>
+                                                                                                                                                                                                                                                                                                <dropdown4Container
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="dropdown4 Container"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <dropdown4Checkbox
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                text="Open link in another tab."
+                                                                                                name="./dropdown4Checkbox"
+                                                value="true"/>
+                                                <dropdown4
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldLabel="dropdown4"
+                                                name="./dropdown4"
+                                                required="{Boolean}false"
+                                                rootPath="/content"/>
+                                            </items>
+                                        </dropdown4Container>
+                                                                                                                                                                                                                                                                                                <dropdown5Container
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="dropdown5 Container"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <dropdown5Checkbox
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                text="Open link in another tab."
+                                                                                                name="./dropdown5Checkbox"
+                                                value="true"/>
+                                                <dropdown5
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldLabel="dropdown5"
+                                                name="./dropdown5"
+                                                required="{Boolean}false"
+                                                rootPath="/content"/>
+                                            </items>
+                                        </dropdown5Container>
+                                                                                                                                                                                                            </items>
+                        </field>
+                    </dropdownMenuModelList>
+                                </items>
+            </column>
                     </items>
     </content>
 </jcr:root>

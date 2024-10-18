@@ -1,0 +1,256 @@
+```html
+<div class="super_container">
+    <header class="header d-flex flex-row">
+        <div class="header_content d-flex flex-row align-items-center">
+            <!-- Logo -->
+            <div class="logo_container">
+                <div class="logo">
+                    <img img-logo src="images/logo.png" alt="" description="Company logo">
+                    <span textfield-companyName description="Company name">course</span>
+                </div>
+            </div>
+
+            <!-- Main Navigation -->
+            <nav class="main_nav_container">
+                <div class="main_nav">
+                    <ul class="main_nav_list">
+                        <li class="main_nav_item"><a link-home href="index.html" description="Home page link">home</a></li>
+                        <li class="main_nav_item"><a link-about href="#" description="About us link">about us</a></li>
+                        <li class="main_nav_item"><a link-courses href="#" description="Courses link">courses</a></li>
+                        <li class="main_nav_item"><a link-elements href="elements.html" description="Elements page link">elements</a></li>
+                        <li class="main_nav_item"><a link-news href="news.html" description="News page link">news</a></li>
+                        <li class="main_nav_item"><a link-contact href="contact.html" description="Contact page link">contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="header_side d-flex flex-row justify-content-center align-items-center">
+            <img img-contactIcon src="images/phone-call.svg" alt="" description="Contact phone icon">
+            <span textfield-phoneNumber description="Company phone number">+43 4566 7788 2457</span>
+        </div>
+
+        <!-- Hamburger -->
+        <div class="hamburger_container">
+            <i class="fas fa-bars trans_200"></i>
+        </div>
+    </header>
+
+    <!-- Menu -->
+    <div class="menu_container menu_mm">
+
+        <!-- Menu Close Button -->
+        <div class="menu_close_container">
+            <div class="menu_close"></div>
+        </div>
+
+        <!-- Menu Items -->
+        <div class="menu_inner menu_mm">
+            <div class="menu menu_mm">
+                <ul class="menu_list menu_mm">
+                    <li class="menu_item menu_mm"><a link-menuHome href="index.html" description="Menu Home link">Home</a></li>
+                    <li class="menu_item menu_mm"><a link-menuAbout href="#" description="Menu About us link">About us</a></li>
+                    <li class="menu_item menu_mm"><a link-menuCourses href="#" description="Menu Courses link">Courses</a></li>
+                    <li class="menu_item menu_mm"><a link-menuElements href="elements.html" description="Menu Elements page link">Elements</a></li>
+                    <li class="menu_item menu_mm"><a link-menuNews href="news.html" description="Menu News page link">News</a></li>
+                    <li class="menu_item menu_mm"><a link-menuContact href="contact.html" description="Menu Contact page link">Contact</a></li>
+                </ul>
+
+                <!-- Menu Social -->
+
+                <div class="menu_social_container menu_mm">
+                    <ul class="menu_social menu_mm">
+                        <li class="menu_social_item menu_mm"><a link-pinterest href="#" description="Pinterest link"><i class="fab fa-pinterest"></i></a></li>
+                        <li class="menu_social_item menu_mm"><a link-linkedin href="#" description="LinkedIn link"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li class="menu_social_item menu_mm"><a link-instagram href="#" description="Instagram link"><i class="fab fa-instagram"></i></a></li>
+                        <li class="menu_social_item menu_mm"><a link-facebook href="#" description="Facebook link"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="menu_social_item menu_mm"><a link-twitter href="#" description="Twitter link"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="menu_copyright menu_mm" textfield-copyright description="Menu copyright notice">Colorlib All rights reserved</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Home -->
+
+    <div class="home">
+        <div class="home_background_container prlx_parent">
+            <div class="home_background prlx" style="background-image:url(images/courses_background.jpg)"></div>
+        </div>
+        <div class="home_content">
+            <h1 textfield-homeTitle description="Home page title">Courses</h1>
+        </div>
+    </div>
+
+    <!-- Popular -->
+
+    <div class="popular page_section">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="section_title text-center">
+                        <h1 textfield-popularCoursesTitle description="Popular Courses section title">Popular Courses</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row course_boxes">
+
+                <!-- Popular Course Item -->
+                <div class="col-lg-4 course_box">
+                    <div class="card">
+                        <img class="card-img-top" img-course1 src="images/course_1.jpg" alt="https://unsplash.com/@kellybrito" description="Course 1 image">
+                        <div class="card-body text-center">
+                            <div class="card-title"><a link-course1 href="courses.html" description="Course 1 title link">A complete guide to design</a></div>
+                            <div class="card-text" textarea-course1Description description="Course 1 description">Adobe Guide, Layes, Smart Objects etc...</div>
+                        </div>
+                        <div class="price_box d-flex flex-row align-items-center">
+                            <div class="course_author_image">
+                                <img img-author1 src="images/author.jpg" alt="https://unsplash.com/@mehdizadeh" description="Author 1 image">
+                            </div>
+                            <div class="course_author_name" textfield-author1Name description="Author 1 name">Michael Smith, <span>Author</span></div>
+                            <div class="course_price d-flex flex-column align-items-center justify-content-center"><span textfield-course1Price description="Course 1 price">$29</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Popular Course Item -->
+                <div class="col-lg-4 course_box">
+                    <div class="card">
+                        <img class="card-img-top" img-course2 src="images/course_2.jpg" alt="https://unsplash.com/@cikstefan" description="Course 2 image">
+                        <div class="card-body text-center">
+                            <div class="card-title"><a link-course2 href="courses.html" description="Course 2 title link">Beginners guide to HTML</a></div>
+                            <div class="card-text" textarea-course2Description description="Course 2 description">Adobe Guide, Layes, Smart Objects etc...</div>
+                        </div>
+                        <div class="price_box d-flex flex-row align-items-center">
+                            <div class="course_author_image">
+                                <img img-author2 src="images/author.jpg" alt="https://unsplash.com/@mehdizadeh" description="Author 2 image">
+                            </div>
+                            <div class="course_author_name" textfield-author2Name description="Author 2 name">Michael Smith, <span>Author</span></div>
+                            <div class="course_price d-flex flex-column align-items-center justify-content-center"><span textfield-course2Price description="Course 2 price">$29</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Following course items are similar and repeat the pattern established above -->
+
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="newsletter">
+                <div class="row">
+                    <div class="col">
+                        <div class="section_title text-center">
+                            <h1 textfield-newsletterTitle description="Newsletter section title">Subscribe to newsletter</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-center">
+                        <div class="newsletter_form_container mx-auto">
+                            <form action="post">
+                                <div class="newsletter_form d-flex flex-md-row flex-column flex-xs-column align-items-center justify-content-center">
+                                    <input id="newsletter_email" class="newsletter_email" type="email" placeholder="Email Address" required="required" data-error="Valid email is required.">
+                                    <button id="newsletter_submit" type="submit" class="newsletter_submit_btn trans_300" value="Submit">Subscribe</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_content">
+                <div class="row">
+                    <div class="col-lg-3 footer_col">
+                        <div class="logo_container">
+                            <div class="logo">
+                                <img img-footerLogo src="images/logo.png" alt="" description="Footer logo">
+                                <span textfield-footerCompanyName description="Company name in footer">course</span>
+                            </div>
+                        </div>
+                        <p class="footer_about_text" textarea-footerAbout description="Footer about text">In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum, tempor lacus.</p>
+                    </div>
+                    <div class="col-lg-3 footer_col">
+                        <div class="footer_column_title" textfield-footerMenuTitle description="Footer menu title">Menu</div>
+                        <div class="footer_column_content">
+                            <ul>
+                                <li class="footer_list_item"><a link-footerHome href="index.html" description="Footer Home link">Home</a></li>
+                                <li class="footer_list_item"><a link-footerAbout href="#" description="Footer About us link">About Us</a></li>
+                                <li class="footer_list_item"><a link-footerCourses href="#" description="Footer Courses link">Courses</a></li>
+                                <li class="footer_list_item"><a link-footerNews href="news.html" description="Footer News link">News</a></li>
+                                <li class="footer_list_item"><a link-footerContact href="contact.html" description="Footer Contact link">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Footer Column - Useful Links -->
+                    <div class="col-lg-3 footer_col">
+                        <div class="footer_column_title" textfield-footerLinksTitle description="Footer useful links title">Useful Links</div>
+                        <div class="footer_column_content">
+                            <ul>
+                                <li class="footer_list_item"><a link-testimonials href="#" description="Footer Testimonials link">Testimonials</a></li>
+                                <li class="footer_list_item"><a link-faq href="#" description="Footer FAQ link">FAQ</a></li>
+                                <li class="footer_list_item"><a link-community href="#" description="Footer Community link">Community</a></li>
+                                <li class="footer_list_item"><a link-campusPictures href="#" description="Footer Campus Pictures link">Campus Pictures</a></li>
+                                <li class="footer_list_item"><a link-tuitions href="#" description="Footer Tuitions link">Tuitions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Footer Column - Contact -->
+                    <div class="col-lg-3 footer_col">
+                        <div class="footer_column_title" textfield-footerContactTitle description="Footer contact title">Contact</div>
+                        <div class="footer_column_content">
+                            <ul>
+                                <li class="footer_contact_item">
+                                    <div class="footer_contact_icon">
+                                        <img img-placeholderIcon src="images/placeholder.svg" alt="https://www.flaticon.com/authors/lucy-g" description="Placeholder icon">
+                                    </div>
+                                    <span textfield-address description="Company address">Blvd Libertad, 34 m05200 Arévalo</span>
+                                </li>
+                                <li class="footer_contact_item">
+                                    <div class="footer_contact_icon">
+                                        <img img-phoneIcon src="images/smartphone.svg" alt="https://www.flaticon.com/authors/lucy-g" description="Smartphone icon">
+                                    </div>
+                                    <span textfield-contactPhoneNumber description="Company contact phone number">0034 37483 2445 322</span>
+                                </li>
+                                <li class="footer_contact_item">
+                                    <div class="footer_contact_icon">
+                                        <img img-emailIcon src="images/envelope.svg" alt="https://www.flaticon.com/authors/lucy-g" description="Envelope icon">
+                                    </div>
+                                    <span textfield-contactEmail description="Company contact email">hello@company.com</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bar d-flex flex-column flex-sm-row align-items-center">
+                <div class="footer_copyright">
+                    <p class="footer_about_text" textarea-footerCopyright description="Footer copyright text">In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum, tempor lacus.</p>
+                </div>
+                <div class="subscription_options">
+                    <div>
+                        <p textfield-preferences description="Subscription preferences">Preferences:</p>
+                        <div>
+                            <p textfield-emailUpdates description="Email Updates subscription status">Email Updates: Enabled</p>
+                        </div>
+                        <div>
+                            <p textfield-smsNotifications description="SMS Notifications subscription status">SMS Notifications: Disabled</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_social ml-sm-auto">
+                    <ul class="menu_social">
+                        <li class="menu_social_item"><a link-footerPinterest href="#" description="Footer Pinterest link"><i class="fab fa-pinterest"></i></a></li>
+                        <li class="menu_social_item"><a link-footerLinkedIn href="#" description="Footer LinkedIn link"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li class="menu_social_item"><a link-footerInstagram href="#" description="Footer Instagram link"><i class="fab fa-instagram"></i></a></li>
+                        <li class="menu_social_item"><a link-footerFacebook href="#" description="Footer Facebook link"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="menu_social_item"><a link-footerTwitter href="#" description="Footer Twitter link"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+```
