@@ -1,0 +1,34 @@
+{
+  "components": {
+    "Visit": {
+      "slingModel": "nl.dept.aem.pizzeria.core.models.VisitModel",
+      "dialog": "pizzeria.components.banner",
+      "fields": [
+        {
+          "name": "title",
+          "type": "textfield",
+          "maxLength": 20,
+          "placeHolder": "Placeholder",
+          "fieldDescription": "First Name",
+          "required": true
+        },
+        {
+          "name": "message",
+          "type": "textarea",
+          "maxLength": 200,
+          "placeHolder": "Message text area",
+          "fieldDescription": "Message text area",
+          "required": false
+        }
+      ]
+    },
+    "Portrait": {
+      "slingModel": "nl.dept.aem.pizzeria.core.models.Portrait",
+      "dialog": "pizzeria.components.portrait",
+      "type": "image",
+      "placeHolder": "Placeholder",
+      "fieldDescription": "Image field",
+      "required": false
+    }
+  }
+}

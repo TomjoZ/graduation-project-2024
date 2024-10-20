@@ -2,7 +2,7 @@ Objective:
 Your objective is to attribute regular HTML with field type attributes and a unique field name (varName) according to a specific syntax for a  tool, that turns this into adobe experience manager CMS components, to understand it. You only return the new complate HTML, no further text.
 
 Syntax:
-Here is a list of all the attributes that are currently supported by the module: textfield-[VarName] textarea-[VarName] checkbox-[VarName] link-[VarName] img-[VarName] select-[VarName] description list-[VarName] The [VarName] placeholder represents the variable name you choose for the field and should be replaced by the actual name in your HTML.
+Here is a list of all the attributes that are currently supported by the module: textfield-[VarName] textarea-[VarName] checkbox-[VarName] link-[VarName] img-[VarName] select-[VarName] description="" list-[VarName] The [VarName] placeholder represents the variable name you choose for the field and should be replaced by the actual name in your HTML.
 
 1. textField
 Add the textfield-[VarName] attribute to your header (h1,h2,h3 etc) tags, replacing [VarName] with your unique chosen field name.
@@ -27,7 +27,6 @@ What module expects:
 
 4. link
 Add the link-[VarName] attribute to your a tag, replacing [VarName] with your chosen field name.
-
 HTML Original:
 <a href="#">
     Click Here
@@ -50,15 +49,12 @@ HTML Original:
 <p> Component Title </p>
 What module expects:
 <p textfield-title description="This field defines the component title"> Component Title </p>
-
 textfield-title serves as an example and it can be as well e.g. img-varName , link-varName etc.
-
 
 
 7. list-[VarName]
 Add the list-[VarName] attribute to <ul> tag, replacing [VarName] with your chosen list name.
 Only used in <ul> <li>.
-
 HTML Original:
 <ul>
     <li>
@@ -96,432 +92,273 @@ What module expects:
 Important:
 1. [VarName] should be a unique name you create for each attribute, ensuring that each field is uniquely identifiable within the HTML structure. This helps avoid conflicts and ensures accurate mapping to Adobe Experience Manager components.
 2. Return only the complete new html
-3. Leave original HTML structure size in tact.
+3. Leave original HTML structure and size intact. Do not shorten it.
+4. Every element you attribute, must have a description.
 
 
 regular HTML:
+<header class="ud-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <nav class="navbar navbar-expand-lg">
+        <img src="assets/images/logo/logo.svg" alt="Logo" />
 
-<header class="s-header">
+          <div class="navbar-collapse">
+            <ul id="nav" class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="ud-menu-scroll">Home</a>
+              </li>
 
-    <div class="header-logo">
-        <a class="site-logo" href="index.html">
-            <img src="images/Metal-Complex-alb.svg" alt="Homepage">
-        </a>
-    </div>
-
-    <nav class="header-nav">
-
-        <h3>Navigati catre</h3>
-
-        <div class="header-nav__content">
-
-            <ul class="header-nav__list">
-                <li><a
-                        class="smoothscroll"
-                        href="#home"
-                        title="home"
-                    >   Acasa
-                    </a>
-                </li>
-                <li><a
-                        class="smoothscroll"
-                        href="#about"
-                        title="about"
-                    >   Despre Noi
-                    </a>
-                </li>
-                <li><a
-                        class="smoothscroll"
-                        href="#services"
-                        title="services"
-                    >   Servicii
-                    </a>
-                </li>
-                <li><a
-                        class="smoothscroll"
-                        href="#works"
-                        title="works"
-                    >   Portofoliu
-                    </a>
-                </li>
-                <li><a
-                        class="smoothscroll"
-                        href="#contact"
-                        title="contact"
-                    >   Contact
-                    </a>
-                </li>
+              <li class="nav-item">
+                <a class="ud-menu-scroll">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="ud-menu-scroll">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="ud-menu-scroll">Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="ud-menu-scroll">Contact</a>
+              </li>
             </ul>
+          </div>
 
-            <p>Procesul de tăiere a metalelor implică îndepărtarea excesului de material dintr-o piesă de prelucrat sub formă de cip folosind un instrument în formă de pană.</p>
-
-            <ul class="header-nav__social">
-                <li>
-                    <a
-                        href="https://www.facebook.com/pages/category/Industrial-Company/METAL-Complex-1566459686784510/"><i class="fab fa-facebook"></i></a>
-                </li>
-                <li>
-                    <a href="#0"><i class="fab fa-twitter"></i></a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/accounts/login/?next=/metal_complex/"><i class="fab fa-instagram"></i></a>
-                </li>
-            </ul>
-
-        </div>
-
-    </nav>
-</header>
-
-
-<section id="home" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="images/300.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
-
-    <div class="grid-overlay">
-        <div></div>
-    </div>
-
-    <div class="home-content">
-
-        <div class="row home-content__main">
-
-            <h1>
-            Metal Complex
-            </h1>
-
-            <h3>
-            Nu urmați tendințele, stabiliți-le.
-            </h3>
-
-            <div class="home-content__video">
-                <a
-                    class="video-link"
-                    href="https://player.vimeo.com/video/117310401?color=01aef0&title=0&byline=0&portrait=0"
-                    data-lity
-                >
-                    <span
-                        class="video-icon"
-                    >
-                    </span>
-                    <span
-                        class="video-text"
-                    >   Vizionati
-                    </span>
-                </a>
-            </div>
-
-            <div class="home-content__button">
-                <a
-                    href="#about"
-                    class="smoothscroll btn btn--primary btn--large"
-                >
-                    Mai multe despre noi
-                </a>
-                <a
-                    href="#contact"
-                    class="smoothscroll btn btn--large"
-                >
-                    Contactati-ne
-                </a>
-            </div>
-
-        </div>
-
-        <div class="home-content__scroll">
-            <a href="#about"
-                class="scroll-link smoothscroll"
-            >
-                Scroll
+          <div class="navbar-btn d-none d-sm-inline-block">
+            <a href="login.html" class="ud-main-btn ud-login-btn">
+              Sign In
             </a>
+            <a class="ud-main-btn ud-white-btn" href="javascript:void(0)">
+              Sign Up
+            </a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+<section class="ud-hero" id="home">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="ud-hero-content wow fadeInUp" data-wow-delay=".2s">
+            <p class="ud-hero-taf">
+                #1 solution
+            </p>
+          <h1 class="ud-hero-title">
+            Open-Source Web Template for SaaS, Startup, Apps, and More
+          </h1>
+          <p class="ud-hero-desc">
+            Multidisciplinary Web Template Built with Your Favourite
+            Technology - HTML Bootstrap, Tailwind and React NextJS.
+          </p>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="features" class="ud-features">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="ud-section-title">
+          <h2>Features</h2>
+          <p>
+            There are many variations of passages of Lorem Ipsum available
+            but the majority have suffered alteration in some form.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xl-3 col-lg-3 col-sm-6">
+        <div class="ud-single-feature wow fadeInUp" data-wow-delay=".1s">
+          <div class="ud-feature-icon">
+            <i class="lni lni-gift"></i>
+          </div>
+          <div class="ud-feature-content">
+            <h3 class="ud-feature-title">Free and Open-Source</h3>
+            <p class="ud-feature-desc">
+              Lorem Ipsum is simply dummy text of the printing and industry.
+            </p>
+            <a href="javascript:void(0)" class="ud-feature-link">
+              Learn More
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-3 col-sm-6">
+        <div class="ud-single-feature wow fadeInUp" data-wow-delay=".15s">
+          <div class="ud-feature-icon">
+            <i class="lni lni-move"></i>
+          </div>
+          <div class="ud-feature-content">
+            <h3 class="ud-feature-title">Multipurpose Template</h3>
+            <p class="ud-feature-desc">
+              Lorem Ipsum is simply dummy text of the printing and industry.
+            </p>
+            <a href="javascript:void(0)" class="ud-feature-link">
+              Learn More
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-3 col-sm-6">
+        <div class="ud-single-feature wow fadeInUp" data-wow-delay=".2s">
+          <div class="ud-feature-icon">
+            <i class="lni lni-layout"></i>
+          </div>
+          <div class="ud-feature-content">
+            <h3 class="ud-feature-title">High-quality Design</h3>
+            <p class="ud-feature-desc">
+              Lorem Ipsum is simply dummy text of the printing and industry.
+            </p>
+            <a href="javascript:void(0)" class="ud-feature-link">
+              Learn More
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-3 col-sm-6">
+        <div class="ud-single-feature wow fadeInUp" data-wow-delay=".25s">
+          <div class="ud-feature-icon">
+            <i class="lni lni-layers"></i>
+          </div>
+          <div class="ud-feature-content">
+            <h3 class="ud-feature-title">All Essential Elements</h3>
+            <p class="ud-feature-desc">
+              Lorem Ipsum is simply dummy text of the printing and industry.
+            </p>
+            <a href="javascript:void(0)" class="ud-feature-link">
+              Learn More
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="about" class="ud-about">
+  <div class="container">
+    <div class="ud-about-wrapper wow fadeInUp" data-wow-delay=".2s">
+      <div class="ud-about-content-wrapper">
+        <div class="ud-about-content">
+          <span class="tag">About Us</span>
+          <h2>Brilliant Toolkit to Build Nextgen Website Faster.</h2>
+          <p>
+            The main ‘thrust’ is to focus on educating attendees on how to
+            best protect highly vulnerable business applications with
+            interactive panel discussions and roundtables led by subject
+            matter experts.
+          </p>
 
+          <span>
+            The main ‘thrust’ is to focus on educating attendees on how to
+            best protect highly vulnerable business applications with
+            interactive panel.
+          </span>
+          <a class="ud-main-btn">Learn More</a>
+        </div>
+      </div>
+      <div class="ud-about-image">
+        <img src="assets/images/about/about-image.svg" alt="about-image" />
+      </div>
+    </div>
+  </div>
+</section>
+<section id="newsletter" class="ud-newsletter">
+  <div class="container">
+    <div class="ud-newsletter-wrapper wow fadeInUp" data-wow-delay=".2s">
+      <div class="ud-newsletter-content-wrapper">
+        <div class="ud-newsletter-content">
+          <span class="tag">Stay up to date</span>
+          <h2>Subscribe to our newsletters</h2>
+          <p>
+            Select your newsletter options below;
+          </p>
+          <div>
+              <p>Options: Newsletters</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="team" class="ud-team">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="ud-section-title mx-auto text-center">
+          <span>Our Team</span>
+          <h2>Meet The Team</h2>
+          <p>
+            There are many variations of passages of Lorem Ipsum available
+            but the majority have suffered alteration in some form.
+          </p>
+        </div>
+      </div>
     </div>
 
-    <ul class="home-social">
-        <li>
-            <a href="https://www.facebook.com/pages/category/Industrial-Company/METAL-Complex-1566459686784510/"><i class="fab fa-facebook-f" aria-hidden="true"></i><span>Facebook</span></a>
-        </li>
-        <li>
-            <a href="#0"><i class="fab fa-twitter" aria-hidden="true"></i><span>Twitter</span></a>
-        </li>
-        <li>
-            <a href="https://www.instagram.com/accounts/login/?next=/metal_complex/"><i class="fab fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
-        </li>
+    <ul class="team-list">
+      <li>
+        <div class="ud-single-team wow fadeInUp" data-wow-delay=".1s">
+          <div class="ud-team-image-wrapper">
+            <div class="ud-team-image">
+              <img src="assets/images/team/team-01.png" alt="team" />
+            </div>
 
+            <img
+              src="assets/images/team/dotted-shape.svg"
+              alt="shape"
+              class="shape shape-1"
+            />
+
+          </div>
+          <div class="ud-team-info">
+            <h5>Adveen Desuza</h5>
+            <h6>UI Designer</h6>
+          </div>
+        </div>
+      </li>
+      <li>
+          <div class="ud-single-team wow fadeInUp" data-wow-delay=".1s">
+            <div class="ud-team-image-wrapper">
+              <div class="ud-team-image">
+                <img src="assets/images/team/team-02.png" />
+              </div>
+
+              <img
+                src="assets/images/team/dotted-shape.svg"
+                class="shape shape-1"
+              />
+
+            </div>
+            <div class="ud-team-info">
+              <h5>John Doe</h5>
+              <h6>Frontend Developer</h6>
+            </div>
+          </div>
+        </li>
+      <li>
+        <div class="ud-single-team wow fadeInUp" data-wow-delay=".1s">
+          <div class="ud-team-image-wrapper">
+            <div class="ud-team-image">
+              <img src="assets/images/team/team-02.png" />
+            </div>
+
+            <img
+              src="assets/images/team/dotted-shape.svg"
+              class="shape shape-1"
+            />
+
+          </div>
+          <div class="ud-team-info">
+            <h5>Sarah Doe</h5>
+            <h6>Backend Developer</h6>
+          </div>
+        </div>
+      </li>
     </ul>
-
+  </div>
 </section>
-
-
-<section id="about" class="s-about target-section">
-
-    <div class="row section-header bit-narrow" data-aos="fade-up">
-        <div class="col-full">
-            <h3 class="subhead">Cine suntem</h3>
-            <h1 class="display-1">
-            Echipa noastră are o experiență combinată de peste 5 de ani în prelucrarea metalelor.
-            </h1>
-        </div>
-    </div>
-
-    <div class="row bit-narrow" data-aos="fade-up">
-        <div class="col-full">
-            <p class="lead">
-                Această companie a început ca un hobby pasional și în curând a înflorit în ceva mult mai mult. Am avut parte de lupte echitabile,
-                dar am predominat și acum ne cunoaștem drumul.
-                Conducem compania cu conștiință, ca o familie și tratam angajații și clienții așa cum vrem noi să fim tratați. Suntem ambițiosi, facem lucrurile diferit.
-                Ne trezim în fiecare zi, facem ceva care ne pasionează și incercam să ne îmbunătățim continuu. Nu urmați tendințele, stabiliți-le.
-            </p>
-        </div>
-    </div>
-
-    <div class="row bit-narrow">
-
-        <div class="about-process process block-1-2 block-tab-full">
-
-            <div class="col-block item-process" data-aos="fade-up">
-                <div class="item-process__text">
-                    <h4 class="item-title">Consiliere</h4>
-                    <p>
-                        Iti doresti ca proiectul de amenajare interioara sa fie 100% adaptat nevoilor tale? Profita
-                        de serviciile de consultanta oferite de Metal Complex!
-                    </p>
-                </div>
-            </div>
-            <div class="col-block item-process" data-aos="fade-up">
-                <div class="item-process__text">
-                    <h4 class="item-title">Planificare buget</h4>
-                    <p>
-                        De cate ori nu ti s-a intamplat ca socoteala de la inceputul proiectului sa nu se potriveasca
-                        cu cea de la final? Cu noi nu vei avea parte de surprize neplacute! Inainte de proiectare,
-                        iti facem o estimare cat mai exacta a costurilor!
-                    </p>
-                </div>
-            </div>
-            <div class="col-block item-process" data-aos="fade-up">
-                <div class="item-process__text">
-                    <h4 class="item-title">Proiectare</h4>
-                    <p>
-                        In functie de dimensiunile spatiului pe care vrei sa-l reamenajezi, iti punem la dispozitie
-                        servicii de proiectare 2D si 3D, astfel incat sa poti avea o viziune cat mai exacta asupra rezultatului final.
-                    </p>
-                </div>
-            </div>
-            <div class="col-block item-process" data-aos="fade-up">
-                <div class="item-process__text">
-                    <h4 class="item-title">Livrare si montaj </h4>
-                    <p>
-                        Echipele noastre de montaj se deplaseaza oriunde te-ai afla, transportul si montajul fiind incluse in pretul produsului
-                    </p>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section id='services' class="s-services target-section darker">
-
-    <div class="row section-header bit-narrow" data-aos="fade-up">
-        <div class="col-full">
-            <h3 class="subhead">Ce facem</h3>
-            <h1 class="display-1">
-                Ne mândrim cu ceea ce facem. Serviciile noastre sunt concepute pentru a vă ajuta afacerea sau casa
-                să iasă în evidență
-            </h1>
-        </div>
-    </div>
-
-    <div class="row bit-narrow services block-1-2 block-tab-full">
-
-        <div class="col-block item-service" data-aos="fade-up">
-            <div class="item-service__icon">
-                <i class="icon-star"></i>
-            </div>
-            <div class="item-service__text">
-                <h
-
-3 class="item-title">Taierea cu plasma a metalului</h3>
-                <p>Facilitatea noastra include o mașina de tăiat cu plasma de ultimă generație,
-                care ne permite să oferim clienților noștri soluții interne complete.
-                </p>
-            </div>
-        </div>
-
-    </div>
-
-</section>
-
-
-<section id="works" class="s-works target-section">
-
-    <div class="row section-header has-bottom-sep narrow target-section" data-aos="fade-up">
-        <div class="col-full">
-            <h3 class="subhead">Portofoliul nostru</h3>
-            <h1 class="display-1">
-            Creăm produse și experiențe pe care oamenii le iubesc. Consultați lucrările noastre recente.
-            </h1>
-        </div>
-    </div>
-
-    <div class="row masonry-wrap">
-        <div class="masonry">
-            <div class="masonry__brick" data-aos="fade-up">
-                <div class="item-folio">
-
-                    <div class="item-folio__thumb">
-                        <a href="images/curcanu2.jpeg" class="thumb-link" title="Shutterbug" data-size="1050x700">
-                            <img src="images/curcanu2.jpeg" width="580"
-                                 srcset="images/curcanu2.jpeg 1x, images/curcanu2.jpeg 2x" alt="">
-                        </a>
-                    </div>
-
-                    <div class="item-folio__text">
-                        <h3 class="item-folio__title">
-                            Shutterbug
-                        </h3>
-                        <p class="item-folio__cat">
-                            Branding
-                        </p>
-                    </div>
-
-                    <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
-                        <i class="icon-link"></i>
-                    </a>
-
-                    <div class="item-folio__caption">
-                        <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-<section id="about2" class="s-about target-section">
-
-    <div class="row section-header bit-narrow" data-aos="fade-up">
-        <div class="col-full">
-            <h3 class="subhead">Cine suntem</h3>
-            <h1 class="display-1">
-            Echipa noastră are o experiență combinată de peste 5 de ani în prelucrarea metalelor.
-            </h1>
-        </div>
-    </div>
-
-    <div class="row bit-narrow" data-aos="fade-up">
-        <div class="col-full">
-            <p class="lead">
-                Această companie a început ca un hobby pasional și în curând a înflorit în ceva mult mai mult. Am avut parte de lupte echitabile,
-                dar am predominat și acum ne cunoaștem drumul.
-                Conducem compania cu conștiință, ca o familie și tratam angajații și clienții așa cum vrem noi să fim tratați. Suntem ambițiosi, facem lucrurile diferit.
-                Ne trezim în fiecare zi, facem ceva care ne pasionează și incercam să ne îmbunătățim continuu. Nu urmați tendințele, stabiliți-le.
-            </p>
-        </div>
-    </div>
-</section>
-
-<section id="clients" class="s-clients target-section darker">
-    <div class="grid-overlay">
-        <div></div>
-    </div>
-    <div class="row section-header text-center narrow" data-aos="fade-up">
-        <div class="col-full">
-            <h3 class="subhead">Clientii nostri</h3>
-            <h1 class="display-1">Metal Complex realizeaza, la cerere, numeroase elemente metalice personalizate, conform cerintelor tale.</h1>
-        </div>
-    </div>
-    <div class="row clients-wrap" data-aos="fade-up">
-        <div class="col-twelve">
-            <ul class="clients">
-                <li><a href="#0">Rafturi</a></li>
-            </ul>
-        </div>
-    </div>
-
-</section>
-
-
-<section class="s-testimonials">
-
-    <div class="testimonials__icon" data-aos="fade-up"></div>
-
-    <div class="row testimonials narrow">
-
-        <div class="col-full testimonials__slider" data-aos="fade-up">
-
-            <div class="testimonials__slide">
-                <p>Echipa noastră este pasionată de serviciile pentru clienți.Fie că sunt în calitate,
-                administrare sau operațiuni, ne străduim cu toții să oferim soluții optime clienților noștri.
-                </p>
-                <div class="testimonials__author">
-                    Alexandru Andrei
-                    <span>Metal Complex</span>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section id="contact" class="s-contact target-section">
-        <div class="grid-overlay">
-            <div></div>
-        </div>
-    <div class="row section-header narrow" data-aos="fade-up">
-        <div class="col-full">
-            <h3 class="subhead">Keep In Touch</h3>
-            <h1 class="display-1">Nu ezitati sa ne contactati pentru orice <br> idee de proiect sau colaborare.</h1>
-        </div>
-    </div>
-
-    <div class="row contact-main" data-aos="fade-up">
-        <div class="col-full">
-            <p class="contact-email">
-                <a href="mailto:contact@metalcomplex.ro">contact@example.com</a>
-            </p>
-            <p class="contact-address">
-            Aleea Teisani 125 <br>
-            Sector 1, Bucuresti
-            </p>
-            <p class="contact-numbers">
-            0721 617 118
-            </p>
-            <p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7012.802855800939!2d26.075809337785675!3d44.
-                53618056909786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b21ccaffff5ea5%3A0x25b6259d3c95de9b!2sAleea%20Tei%C8%99ani%20125%2C%20Bucure%C8%99ti!5e0!3m2!1sro!2sro!4v1610395996362!5m2!1sro!2sro"
-                        width="800" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
-                </iframe>
-            </p>
-            <ul class="contact-social">
-                <li>
-                    <a href="https://www.facebook.com/pages/category/Industrial-Company/METAL-Complex-1566459686784510/"><i class="fab fa-facebook"></i></a>
-                </li>
-                <li>
-                    <a href="#0"><i class="fab fa-twitter"></i></a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/accounts/login/?next=/metal_complex/"><i class="fab fa-instagram"></i></a>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-</section>
-
-
-<footer>
-    <div class="ss-go-top">
-        <a class="smoothscroll" title="Back to Top" href="#top">Reveniti la inceput</a>
-    </div>
-</footer>
-
-

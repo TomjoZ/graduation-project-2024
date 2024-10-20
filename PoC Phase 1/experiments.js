@@ -99,7 +99,7 @@ async function getResponseMistralLarge() {
   try {
     const startTime = Date.now();
     const response = await mistral.chat.complete({
-        model: "mistral-large-2407",
+        model: "ft:open-mistral-7b:229c75b9:20241019:ce30be5c",
         messages: [
           {
             content: prompt,
@@ -151,8 +151,8 @@ async function getResponseCodestral() {
 
 
 getResponseGPT4o();
-getResponseGPT4omini();
-getResponseClaude();
-getResponseClaudeHaiku();
+//getResponseGPT4omini();
+//getResponseClaude();
+//getResponseClaudeHaiku();
 getResponseMistralLarge();
-getResponseCodestral();
+//getResponseCodestral();

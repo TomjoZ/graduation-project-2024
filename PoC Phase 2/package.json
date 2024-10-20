@@ -1,0 +1,20 @@
+{
+  "name": "poc-phase-1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.29.0",
+    "@mistralai/mistralai": "^1.1.0",
+    "aem-htl-builder": "^1.0.8",
+    "axios": "^1.7.7",
+    "fs": "^0.0.1-security",
+    "openai": "^4.67.3"
+  },
+  "description": ""
+}
