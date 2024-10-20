@@ -1,0 +1,239 @@
+```html
+<sly data-sly-use.model="com.adobe.learning.core.models.DefaultModel">
+    <header class="header d-flex flex-row">
+        <div class="header_content d-flex flex-row align-items-center">
+            <!-- Logo -->
+            <div class="logo_container">
+                <div class="logo">
+                    <img src="${model.logoReference @ context='uri'}" alt="" data-sly-test="${model.logoReference}"/>
+                    <span>${model.companyName}</span>
+                </div>
+            </div>
+            <!-- Main Navigation -->
+            <nav class="main_nav_container">
+                <div class="main_nav">
+                    <ul class="main_nav_list">
+                        <li class="main_nav_item"><a href="${model.home}" target="${model.homeCheckbox ? '_blank' : '_self'}">home</a></li>
+                        <li class="main_nav_item"><a href="${model.about}" target="${model.aboutCheckbox ? '_blank' : '_self'}">about us</a></li>
+                        <li class="main_nav_item"><a href="${model.courses}" target="${model.coursesCheckbox ? '_blank' : '_self'}">courses</a></li>
+                        <li class="main_nav_item"><a href="${model.elements}" target="${model.elementsCheckbox ? '_blank' : '_self'}">elements</a></li>
+                        <li class="main_nav_item"><a href="${model.news}" target="${model.newsCheckbox ? '_blank' : '_self'}">news</a></li>
+                        <li class="main_nav_item"><a href="${model.contact}" target="${model.contactCheckbox ? '_blank' : '_self'}">contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="header_side d-flex flex-row justify-content-center align-items-center">
+            <img src="${model.contactIconReference @ context='uri'}" alt="" data-sly-test="${model.contactIconReference}"/>
+            <span>${model.phoneNumber}</span>
+        </div>
+        <!-- Hamburger -->
+        <div class="hamburger_container">
+            <i class="fas fa-bars trans_200"/>
+        </div>
+    </header>
+    <!-- Menu -->
+    <div class="menu_container menu_mm">
+        <!-- Menu Close Button -->
+        <div class="menu_close_container">
+            <div class="menu_close"/>
+        </div>
+        <!-- Menu Items -->
+        <div class="menu_inner menu_mm">
+            <div class="menu menu_mm">
+                <ul class="menu_list menu_mm">
+                    <li class="menu_item menu_mm"><a href="${model.menuHome}" target="${model.menuHomeCheckbox ? '_blank' : '_self'}">Home</a></li>
+                    <li class="menu_item menu_mm"><a href="${model.menuAbout}" target="${model.menuAboutCheckbox ? '_blank' : '_self'}">About us</a></li>
+                    <li class="menu_item menu_mm"><a href="${model.menuCourses}" target="${model.menuCoursesCheckbox ? '_blank' : '_self'}">Courses</a></li>
+                    <li class="menu_item menu_mm"><a href="${model.menuElements}" target="${model.menuElementsCheckbox ? '_blank' : '_self'}">Elements</a></li>
+                    <li class="menu_item menu_mm"><a href="${model.menuNews}" target="${model.menuNewsCheckbox ? '_blank' : '_self'}">News</a></li>
+                    <li class="menu_item menu_mm"><a href="${model.menuContact}" target="${model.menuContactCheckbox ? '_blank' : '_self'}">Contact</a></li>
+                </ul>
+                <!-- Menu Social -->
+                <div class="menu_social_container menu_mm">
+                    <ul class="menu_social menu_mm">
+                        <li class="menu_social_item menu_mm"><a href="${model.pinterest}" target="${model.pinterestCheckbox ? '_blank' : '_self'}"><i class="fab fa-pinterest"/></a></li>
+                        <li class="menu_social_item menu_mm"><a href="${model.linkedin}" target="${model.linkedinCheckbox ? '_blank' : '_self'}"><i class="fab fa-linkedin-in"/></a></li>
+                        <li class="menu_social_item menu_mm"><a href="${model.instagram}" target="${model.instagramCheckbox ? '_blank' : '_self'}"><i class="fab fa-instagram"/></a></li>
+                        <li class="menu_social_item menu_mm"><a href="${model.facebook}" target="${model.facebookCheckbox ? '_blank' : '_self'}"><i class="fab fa-facebook-f"/></a></li>
+                        <li class="menu_social_item menu_mm"><a href="${model.twitter}" target="${model.twitterCheckbox ? '_blank' : '_self'}"><i class="fab fa-twitter"/></a></li>
+                    </ul>
+                </div>
+                <div class="menu_copyright menu_mm">${model.copyright}</div>
+            </div>
+        </div>
+    </div>
+    <!-- Home -->
+    <div class="home">
+        <div class="home_background_container prlx_parent">
+            <div class="home_background prlx" style="background-image:url(images/courses_background.jpg)"/>
+        </div>
+        <div class="home_content">
+            <h1>${model.homeTitle}</h1>
+        </div>
+    </div>
+    <!-- Popular -->
+    <div class="popular page_section">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="section_title text-center">
+                        <h1>${model.popularCoursesTitle}</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row course_boxes">
+                <!-- Popular Course Item -->
+                <div class="col-lg-4 course_box">
+                    <div class="card">
+                        <img class="card-img-top" src="${model.course1Reference @ context='uri'}" alt="https://unsplash.com/@kellybrito" data-sly-test="${model.course1Reference}"/>
+                        <div class="card-body text-center">
+                            <div class="card-title"><a href="${model.course1}" target="${model.course1Checkbox ? '_blank' : '_self'}">A complete guide to design</a></div>
+                            <div class="card-text">${model.course1Description}</div>
+                        </div>
+                        <div class="price_box d-flex flex-row align-items-center">
+                            <div class="course_author_image">
+                                <img src="${model.author1Reference @ context='uri'}" alt="https://unsplash.com/@mehdizadeh" data-sly-test="${model.author1Reference}"/>
+                            </div>
+                            <div class="course_author_name">${model.author1Name}</div>
+                            <div class="course_price d-flex flex-column align-items-center justify-content-center"><span>${model.course1Price}</span></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Popular Course Item -->
+                <div class="col-lg-4 course_box">
+                    <div class="card">
+                        <img class="card-img-top" src="${model.course2Reference @ context='uri'}" alt="https://unsplash.com/@cikstefan" data-sly-test="${model.course2Reference}"/>
+                        <div class="card-body text-center">
+                            <div class="card-title"><a href="${model.course2}" target="${model.course2Checkbox ? '_blank' : '_self'}">Beginners guide to HTML</a></div>
+                            <div class="card-text">${model.course2Description}</div>
+                        </div>
+                        <div class="price_box d-flex flex-row align-items-center">
+                            <div class="course_author_image">
+                                <img src="${model.author2Reference @ context='uri'}" alt="https://unsplash.com/@mehdizadeh" data-sly-test="${model.author2Reference}"/>
+                            </div>
+                            <div class="course_author_name">${model.author2Name}</div>
+                            <div class="course_price d-flex flex-column align-items-center justify-content-center"><span>${model.course2Price}</span></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Following course items are similar and repeat the pattern established above -->
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="newsletter">
+                <div class="row">
+                    <div class="col">
+                        <div class="section_title text-center">
+                            <h1>${model.newsletterTitle}</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-center">
+                        <div class="newsletter_form_container mx-auto">
+                            <form action="post">
+                                <div class="newsletter_form d-flex flex-md-row flex-column flex-xs-column align-items-center justify-content-center">
+                                    <input id="newsletter_email" class="newsletter_email" type="email" placeholder="Email Address" required="required" data-error="Valid email is required.">
+                                    <button id="newsletter_submit" type="submit" class="newsletter_submit_btn trans_300" value="Submit">Subscribe</button>
+                                </input></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_content">
+                <div class="row">
+                    <div class="col-lg-3 footer_col">
+                        <div class="logo_container">
+                            <div class="logo">
+                                <img src="${model.footerLogoReference @ context='uri'}" alt="" data-sly-test="${model.footerLogoReference}"/>
+                                <span>${model.footerCompanyName}</span>
+                            </div>
+                        </div>
+                        <p class="footer_about_text">${model.footerAbout}</p>
+                    </div>
+                    <div class="col-lg-3 footer_col">
+                        <div class="footer_column_title">${model.footerMenuTitle}</div>
+                        <div class="footer_column_content">
+                            <ul>
+                                <li class="footer_list_item"><a href="${model.footerHome}" target="${model.footerHomeCheckbox ? '_blank' : '_self'}">Home</a></li>
+                                <li class="footer_list_item"><a href="${model.footerAbout}" target="${model.footerAboutCheckbox ? '_blank' : '_self'}">About Us</a></li>
+                                <li class="footer_list_item"><a href="${model.footerCourses}" target="${model.footerCoursesCheckbox ? '_blank' : '_self'}">Courses</a></li>
+                                <li class="footer_list_item"><a href="${model.footerNews}" target="${model.footerNewsCheckbox ? '_blank' : '_self'}">News</a></li>
+                                <li class="footer_list_item"><a href="${model.footerContact}" target="${model.footerContactCheckbox ? '_blank' : '_self'}">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Footer Column - Useful Links -->
+                    <div class="col-lg-3 footer_col">
+                        <div class="footer_column_title">${model.footerLinksTitle}</div>
+                        <div class="footer_column_content">
+                            <ul>
+                                <li class="footer_list_item"><a href="${model.testimonials}" target="${model.testimonialsCheckbox ? '_blank' : '_self'}">Testimonials</a></li>
+                                <li class="footer_list_item"><a href="${model.faq}" target="${model.faqCheckbox ? '_blank' : '_self'}">FAQ</a></li>
+                                <li class="footer_list_item"><a href="${model.community}" target="${model.communityCheckbox ? '_blank' : '_self'}">Community</a></li>
+                                <li class="footer_list_item"><a href="${model.campusPictures}" target="${model.campusPicturesCheckbox ? '_blank' : '_self'}">Campus Pictures</a></li>
+                                <li class="footer_list_item"><a href="${model.tuitions}" target="${model.tuitionsCheckbox ? '_blank' : '_self'}">Tuitions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Footer Column - Contact -->
+                    <div class="col-lg-3 footer_col">
+                        <div class="footer_column_title">${model.footerContactTitle}</div>
+                        <div class="footer_column_content">
+                            <ul>
+                                <li class="footer_contact_item">
+                                    <div class="footer_contact_icon">
+                                        <img src="${model.placeholderIconReference @ context='uri'}" alt="https://www.flaticon.com/authors/lucy-g" data-sly-test="${model.placeholderIconReference}"/>
+                                    </div>
+                                    <span>${model.address}</span>
+                                </li>
+                                <li class="footer_contact_item">
+                                    <div class="footer_contact_icon">
+                                        <img src="${model.phoneIconReference @ context='uri'}" alt="https://www.flaticon.com/authors/lucy-g" data-sly-test="${model.phoneIconReference}"/>
+                                    </div>
+                                    <span>${model.contactPhoneNumber}</span>
+                                </li>
+                                <li class="footer_contact_item">
+                                    <div class="footer_contact_icon">
+                                        <img src="${model.emailIconReference @ context='uri'}" alt="https://www.flaticon.com/authors/lucy-g" data-sly-test="${model.emailIconReference}"/>
+                                    </div>
+                                    <span>${model.contactEmail}</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bar d-flex flex-column flex-sm-row align-items-center">
+                <div class="footer_copyright">
+                    <p class="footer_about_text">${model.footerCopyright}</p>
+                </div>
+                <div class="subscription_options">
+                    <div>
+                        <p>${model.preferences}</p>
+                        <div>
+                            <p>${model.emailUpdates}</p>
+                        </div>
+                        <div>
+                            <p>${model.smsNotifications}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_social ml-sm-auto">
+                    <ul class="menu_social">
+                        <li class="menu_social_item"><a href="${model.footerPinterest}" target="${model.footerPinterestCheckbox ? '_blank' : '_self'}"><i class="fab fa-pinterest"/></a></li>
+                        <li class="menu_social_item"><a href="${model.footerLinkedIn}" target="${model.footerLinkedInCheckbox ? '_blank' : '_self'}"><i class="fab fa-linkedin-in"/></a></li>
+                        <li class="menu_social_item"><a href="${model.footerInstagram}" target="${model.footerInstagramCheckbox ? '_blank' : '_self'}"><i class="fab fa-instagram"/></a></li>
+                        <li class="menu_social_item"><a href="${model.footerFacebook}" target="${model.footerFacebookCheckbox ? '_blank' : '_self'}"><i class="fab fa-facebook-f"/></a></li>
+                        <li class="menu_social_item"><a href="${model.footerTwitter}" target="${model.footerTwitterCheckbox ? '_blank' : '_self'}"><i class="fab fa-twitter"/></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</sly>
+```

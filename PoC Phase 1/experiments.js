@@ -6,7 +6,7 @@ const { Mistral } = require("@mistralai/mistralai");
 
 
 
-const promptset = '../Promptset1/Prompt3';
+const promptset = '../Promptset1/Prompt4';
 const prompt = fs.readFileSync(promptset + '/Prompt.md', 'utf-8');
 
 

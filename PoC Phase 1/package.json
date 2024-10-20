@@ -13,6 +13,7 @@
     "@mistralai/mistralai": "^1.1.0",
     "aem-htl-builder": "^1.0.8",
     "axios": "^1.7.7",
+    "convert": "^5.4.1",
     "fs": "^0.0.1-security",
     "openai": "^4.67.3"
   },

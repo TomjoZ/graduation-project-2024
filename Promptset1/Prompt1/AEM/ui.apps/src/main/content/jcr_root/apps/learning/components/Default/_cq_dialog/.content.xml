@@ -1,0 +1,1080 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="DefaultModel"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+                        <column
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    
+                        <companyName
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="companyName"
+                        name="./companyName"
+                        value="companyName"
+                                                                            fieldDescription="Company name"                        />
+                    
+                        <phoneNumber
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="phoneNumber"
+                        name="./phoneNumber"
+                        value="phoneNumber"
+                                                                            fieldDescription="Company phone number"                        />
+                    
+                        <copyright
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="copyright"
+                        name="./copyright"
+                        value="copyright"
+                                                                            fieldDescription="Menu copyright notice"                        />
+                    
+                        <homeTitle
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="homeTitle"
+                        name="./homeTitle"
+                        value="homeTitle"
+                                                                            fieldDescription="Home page title"                        />
+                    
+                        <popularCoursesTitle
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="popularCoursesTitle"
+                        name="./popularCoursesTitle"
+                        value="popularCoursesTitle"
+                                                                            fieldDescription="Popular Courses section title"                        />
+                    
+                        <course1Description
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                        fieldLabel="course1Description"
+                        name="./course1Description"
+                        value="course1Description"
+                                                                            fieldDescription="Course 1 description"                        />
+                    
+                        <author1Name
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="author1Name"
+                        name="./author1Name"
+                        value="author1Name"
+                                                                            fieldDescription="Author 1 name"                        />
+                    
+                        <course1Price
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="course1Price"
+                        name="./course1Price"
+                        value="course1Price"
+                                                                            fieldDescription="Course 1 price"                        />
+                    
+                        <course2Description
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                        fieldLabel="course2Description"
+                        name="./course2Description"
+                        value="course2Description"
+                                                                            fieldDescription="Course 2 description"                        />
+                    
+                        <author2Name
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="author2Name"
+                        name="./author2Name"
+                        value="author2Name"
+                                                                            fieldDescription="Author 2 name"                        />
+                    
+                        <course2Price
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="course2Price"
+                        name="./course2Price"
+                        value="course2Price"
+                                                                            fieldDescription="Course 2 price"                        />
+                    
+                        <newsletterTitle
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="newsletterTitle"
+                        name="./newsletterTitle"
+                        value="newsletterTitle"
+                                                                            fieldDescription="Newsletter section title"                        />
+                    
+                        <footerCompanyName
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="footerCompanyName"
+                        name="./footerCompanyName"
+                        value="footerCompanyName"
+                                                                            fieldDescription="Company name in footer"                        />
+                    
+                        <footerAbout
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                        fieldLabel="footerAbout"
+                        name="./footerAbout"
+                        value="footerAbout"
+                                                                            fieldDescription="Footer about text"                        />
+                    
+                        <footerMenuTitle
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="footerMenuTitle"
+                        name="./footerMenuTitle"
+                        value="footerMenuTitle"
+                                                                            fieldDescription="Footer menu title"                        />
+                    
+                        <footerLinksTitle
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="footerLinksTitle"
+                        name="./footerLinksTitle"
+                        value="footerLinksTitle"
+                                                                            fieldDescription="Footer useful links title"                        />
+                    
+                        <footerContactTitle
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="footerContactTitle"
+                        name="./footerContactTitle"
+                        value="footerContactTitle"
+                                                                            fieldDescription="Footer contact title"                        />
+                    
+                        <address
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="address"
+                        name="./address"
+                        value="address"
+                                                                            fieldDescription="Company address"                        />
+                    
+                        <contactPhoneNumber
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="contactPhoneNumber"
+                        name="./contactPhoneNumber"
+                        value="contactPhoneNumber"
+                                                                            fieldDescription="Company contact phone number"                        />
+                    
+                        <contactEmail
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="contactEmail"
+                        name="./contactEmail"
+                        value="contactEmail"
+                                                                            fieldDescription="Company contact email"                        />
+                    
+                        <footerCopyright
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                        fieldLabel="footerCopyright"
+                        name="./footerCopyright"
+                        value="footerCopyright"
+                                                                            fieldDescription="Footer copyright text"                        />
+                    
+                        <preferences
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="preferences"
+                        name="./preferences"
+                        value="preferences"
+                                                                            fieldDescription="Subscription preferences"                        />
+                    
+                        <emailUpdates
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="emailUpdates"
+                        name="./emailUpdates"
+                        value="emailUpdates"
+                                                                            fieldDescription="Email Updates subscription status"                        />
+                    
+                        <smsNotifications
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="smsNotifications"
+                        name="./smsNotifications"
+                        value="smsNotifications"
+                                                                            fieldDescription="SMS Notifications subscription status"                        />
+                    
+                                        
+                        <logo
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                        autoStart="{Boolean}false"
+                        class="cq-droptarget"
+                        fieldLabel="logo"
+                        fileNameParameter="./logoName"
+                        fileReferenceParameter="./logoReference"
+                        mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                        multiple="{Boolean}false"
+                        name="./logo"
+                        title="Image"
+                        uploadUrl="${suffix.path}"
+                        useHTML5="{Boolean}true"/>
+                    
+                        <contactIcon
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                        autoStart="{Boolean}false"
+                        class="cq-droptarget"
+                        fieldLabel="contactIcon"
+                        fileNameParameter="./contactIconName"
+                        fileReferenceParameter="./contactIconReference"
+                        mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                        multiple="{Boolean}false"
+                        name="./contactIcon"
+                        title="Image"
+                        uploadUrl="${suffix.path}"
+                        useHTML5="{Boolean}true"/>
+                    
+                        <course1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                        autoStart="{Boolean}false"
+                        class="cq-droptarget"
+                        fieldLabel="course1"
+                        fileNameParameter="./course1Name"
+                        fileReferenceParameter="./course1Reference"
+                        mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                        multiple="{Boolean}false"
+                        name="./course1"
+                        title="Image"
+                        uploadUrl="${suffix.path}"
+                        useHTML5="{Boolean}true"/>
+                    
+                        <author1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                        autoStart="{Boolean}false"
+                        class="cq-droptarget"
+                        fieldLabel="author1"
+                        fileNameParameter="./author1Name"
+                        fileReferenceParameter="./author1Reference"
+                        mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                        multiple="{Boolean}false"
+                        name="./author1"
+                        title="Image"
+                        uploadUrl="${suffix.path}"
+                        useHTML5="{Boolean}true"/>
+                    
+                        <course2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                        autoStart="{Boolean}false"
+                        class="cq-droptarget"
+                        fieldLabel="course2"
+                        fileNameParameter="./course2Name"
+                        fileReferenceParameter="./course2Reference"
+                        mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                        multiple="{Boolean}false"
+                        name="./course2"
+                        title="Image"
+                        uploadUrl="${suffix.path}"
+                        useHTML5="{Boolean}true"/>
+                    
+                        <author2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                        autoStart="{Boolean}false"
+                        class="cq-droptarget"
+                        fieldLabel="author2"
+                        fileNameParameter="./author2Name"
+                        fileReferenceParameter="./author2Reference"
+                        mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                        multiple="{Boolean}false"
+                        name="./author2"
+                        title="Image"
+                        uploadUrl="${suffix.path}"
+                        useHTML5="{Boolean}true"/>
+                    
+                        <footerLogo
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                        autoStart="{Boolean}false"
+                        class="cq-droptarget"
+                        fieldLabel="footerLogo"
+                        fileNameParameter="./footerLogoName"
+                        fileReferenceParameter="./footerLogoReference"
+                        mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                        multiple="{Boolean}false"
+                        name="./footerLogo"
+                        title="Image"
+                        uploadUrl="${suffix.path}"
+                        useHTML5="{Boolean}true"/>
+                    
+                        <placeholderIcon
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                        autoStart="{Boolean}false"
+                        class="cq-droptarget"
+                        fieldLabel="placeholderIcon"
+                        fileNameParameter="./placeholderIconName"
+                        fileReferenceParameter="./placeholderIconReference"
+                        mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                        multiple="{Boolean}false"
+                        name="./placeholderIcon"
+                        title="Image"
+                        uploadUrl="${suffix.path}"
+                        useHTML5="{Boolean}true"/>
+                    
+                        <phoneIcon
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                        autoStart="{Boolean}false"
+                        class="cq-droptarget"
+                        fieldLabel="phoneIcon"
+                        fileNameParameter="./phoneIconName"
+                        fileReferenceParameter="./phoneIconReference"
+                        mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                        multiple="{Boolean}false"
+                        name="./phoneIcon"
+                        title="Image"
+                        uploadUrl="${suffix.path}"
+                        useHTML5="{Boolean}true"/>
+                    
+                        <emailIcon
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                        autoStart="{Boolean}false"
+                        class="cq-droptarget"
+                        fieldLabel="emailIcon"
+                        fileNameParameter="./emailIconName"
+                        fileReferenceParameter="./emailIconReference"
+                        mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                        multiple="{Boolean}false"
+                        name="./emailIcon"
+                        title="Image"
+                        uploadUrl="${suffix.path}"
+                        useHTML5="{Boolean}true"/>
+                    
+                    
+                    
+                        <homeContainer
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="home Container"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <homeCheckbox
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                text="Open link in another tab."
+                                                                fieldDescription="Home page link"                                name="./homeCheckbox"
+                                value="true"/>
+                                <home
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="home"
+                                name="./home"
+                                required="{Boolean}false"
+                                rootPath="/content"/>
+                            </items>
+                        </homeContainer>
+                    
+                        <aboutContainer
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="about Container"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <aboutCheckbox
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                text="Open link in another tab."
+                                                                fieldDescription="About us link"                                name="./aboutCheckbox"
+                                value="true"/>
+                                <about
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="about"
+                                name="./about"
+                                required="{Boolean}false"
+                                rootPath="/content"/>
+                            </items>
+                        </aboutContainer>
+                    
+                        <coursesContainer
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="courses Container"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <coursesCheckbox
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                text="Open link in another tab."
+                                                                fieldDescription="Courses link"                                name="./coursesCheckbox"
+                                value="true"/>
+                                <courses
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="courses"
+                                name="./courses"
+                                required="{Boolean}false"
+                                rootPath="/content"/>
+                            </items>
+                        </coursesContainer>
+                    
+                        <elementsContainer
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="elements Container"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <elementsCheckbox
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                text="Open link in another tab."
+                                                                fieldDescription="Elements page link"                                name="./elementsCheckbox"
+                                value="true"/>
+                                <elements
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="elements"
+                                name="./elements"
+                                required="{Boolean}false"
+                                rootPath="/content"/>
+                            </items>
+                        </elementsContainer>
+                    
+                        <newsContainer
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="news Container"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <newsCheckbox
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                text="Open link in another tab."
+                                                                fieldDescription="News page link"                                name="./newsCheckbox"
+                                value="true"/>
+                                <news
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="news"
+                                name="./news"
+                                required="{Boolean}false"
+                                rootPath="/content"/>
+                            </items>
+                        </newsContainer>
+                    
+                        <contactContainer
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="contact Container"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <contactCheckbox
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                text="Open link in another tab."
+                                                                fieldDescription="Contact page link"                                name="./contactCheckbox"
+                                value="true"/>
+                                <contact
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="contact"
+                                name="./contact"
+                                required="{Boolean}false"
+                                rootPath="/content"/>
+                            </items>
+                        </contactContainer>
+                    
+                        <menuHomeContainer
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="menuHome Container"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <menuHomeCheckbox
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                text="Open link in another tab."
+                                                                fieldDescription="Menu Home link"                                name="./menuHomeCheckbox"
+                                value="true"/>
+                                <menuHome
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="menuHome"
+                                name="./menuHome"
+                                required="{Boolean}false"
+                                rootPath="/content"/>
+                            </items>
+                        </menuHomeContainer>
+                    
+                        <menuAboutContainer
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="menuAbout Container"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <menuAboutCheckbox
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                text="Open link in another tab."
+                                                                fieldDescription="Menu About us link"                                name="./menuAboutCheckbox"
+                                value="true"/>
+                                <menuAbout
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="menuAbout"
+                                name="./menuAbout"
+                                required="{Boolean}false"
+                                rootPath="/content"/>
+                            </items>
+                        </menuAboutContainer>
+                    
+                        <menuCoursesContainer
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="menuCourses Container"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <menuCoursesCheckbox
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                text="Open link in another tab."
+                                                                fieldDescription="Menu Courses link"                                name="./menuCoursesCheckbox"
+                                value="true"/>
+                                <menuCourses
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="menuCourses"
+                                name="./menuCourses"
+                                required="{Boolean}false"
+                                rootPath="/content"/>
+                            </items>
+                        </menuCoursesContainer>
+                    
+                        <menuElementsContainer
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="menuElements Container"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <menuElementsCheckbox
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                text="Open link in another tab."
+                                                                fieldDescription="Menu Elements page link"                                name="./menuElementsCheckbox"
+                                value="true"/>
+                                <menuElements
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="menuElements"
+                                name="./menuElements"
+                                required="{Boolean}false"
+                                rootPath="/content"/>
+                            </items>
+                        </menuElementsContainer>
+                    
+                        <menuNewsContainer
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="menuNews Container"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <menuNewsCheckbox
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                text="Open link in another tab."
+                                                                fieldDescription="Menu News page link"                                name="./menuNewsCheckbox"
+                                value="true"/>
+                                <menuNews
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="menuNews"
+                                name="./menuNews"
+                                required="{Boolean}false"
+                                rootPath="/content"/>
+                            </items>
+                        </menuNewsContainer>
+                    
+                        <menuContactContainer
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="menuContact Container"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <menuContactCheckbox
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                text="Open link in another tab."
+                                                                fieldDescription="Menu Contact page link"                                name="./menuContactCheckbox"
+                                value="true"/>
+                                <menuContact
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="menuContact"
+                                name="./menuContact"
+                                required="{Boolean}false"
+                                rootPath="/content"/>
+                            </items>
+                        </menuContactContainer>
+                    
+                        <pinterestContainer
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="pinterest Container"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <pinterestCheckbox
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                text="Open link in another tab."
+                                                                fieldDescription="Pinterest link"                                name="./pinterestCheckbox"
+                                value="true"/>
+                                <pinterest
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="pinterest"
+                                name="./pinterest"
+                                required="{Boolean}false"
+                                rootPath="/content"/>
+                            </items>
+                        </pinterestContainer>
+                    
+                        <linkedinContainer
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="linkedin Container"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <linkedinCheckbox
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                text="Open link in another tab."
+                                                                fieldDescription="LinkedIn link"                                name="./linkedinCheckbox"
+                                value="true"/>
+                                <linkedin
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="linkedin"
+                                name="./linkedin"
+                                required="{Boolean}false"
+                                rootPath="/content"/>
+                            </items>
+                        </linkedinContainer>
+                    
+                        <instagramContainer
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="instagram Container"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <instagramCheckbox
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                text="Open link in another tab."
+                                                                fieldDescription="Instagram link"                                name="./instagramCheckbox"
+                                value="true"/>
+                                <instagram
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="instagram"
+                                name="./instagram"
+                                required="{Boolean}false"
+                                rootPath="/content"/>
+                            </items>
+                        </instagramContainer>
+                    
+                        <facebookContainer
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="facebook Container"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <facebookCheckbox
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                text="Open link in another tab."
+                                                                fieldDescription="Facebook link"                                name="./facebookCheckbox"
+                                value="true"/>
+                                <facebook
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="facebook"
+                                name="./facebook"
+                                required="{Boolean}false"
+                                rootPath="/content"/>
+                            </items>
+                        </facebookContainer>
+                    
+                        <twitterContainer
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="twitter Container"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <twitterCheckbox
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                text="Open link in another tab."
+                                                                fieldDescription="Twitter link"                                name="./twitterCheckbox"
+                                value="true"/>
+                                <twitter
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="twitter"
+                                name="./twitter"
+                                required="{Boolean}false"
+                                rootPath="/content"/>
+                            </items>
+                        </twitterContainer>
+                    
+                        <course1Container
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="course1 Container"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <course1Checkbox
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                text="Open link in another tab."
+                                                                fieldDescription="Course 1 title link"                                name="./course1Checkbox"
+                                value="true"/>
+                                <course1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="course1"
+                                name="./course1"
+                                required="{Boolean}false"
+                                rootPath="/content"/>
+                            </items>
+                        </course1Container>
+                    
+                        <course2Container
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="course2 Container"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <course2Checkbox
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                text="Open link in another tab."
+                                                                fieldDescription="Course 2 title link"                                name="./course2Checkbox"
+                                value="true"/>
+                                <course2
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="course2"
+                                name="./course2"
+                                required="{Boolean}false"
+                                rootPath="/content"/>
+                            </items>
+                        </course2Container>
+                    
+                        <footerHomeContainer
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="footerHome Container"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <footerHomeCheckbox
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                text="Open link in another tab."
+                                                                fieldDescription="Footer Home link"                                name="./footerHomeCheckbox"
+                                value="true"/>
+                                <footerHome
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="footerHome"
+                                name="./footerHome"
+                                required="{Boolean}false"
+                                rootPath="/content"/>
+                            </items>
+                        </footerHomeContainer>
+                    
+                        <footerAboutContainer
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="footerAbout Container"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <footerAboutCheckbox
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                text="Open link in another tab."
+                                                                fieldDescription="Footer About us link"                                name="./footerAboutCheckbox"
+                                value="true"/>
+                                <footerAbout
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="footerAbout"
+                                name="./footerAbout"
+                                required="{Boolean}false"
+                                rootPath="/content"/>
+                            </items>
+                        </footerAboutContainer>
+                    
+                        <footerCoursesContainer
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="footerCourses Container"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <footerCoursesCheckbox
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                text="Open link in another tab."
+                                                                fieldDescription="Footer Courses link"                                name="./footerCoursesCheckbox"
+                                value="true"/>
+                                <footerCourses
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="footerCourses"
+                                name="./footerCourses"
+                                required="{Boolean}false"
+                                rootPath="/content"/>
+                            </items>
+                        </footerCoursesContainer>
+                    
+                        <footerNewsContainer
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="footerNews Container"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <footerNewsCheckbox
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                text="Open link in another tab."
+                                                                fieldDescription="Footer News link"                                name="./footerNewsCheckbox"
+                                value="true"/>
+                                <footerNews
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="footerNews"
+                                name="./footerNews"
+                                required="{Boolean}false"
+                                rootPath="/content"/>
+                            </items>
+                        </footerNewsContainer>
+                    
+                        <footerContactContainer
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="footerContact Container"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <footerContactCheckbox
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                text="Open link in another tab."
+                                                                fieldDescription="Footer Contact link"                                name="./footerContactCheckbox"
+                                value="true"/>
+                                <footerContact
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="footerContact"
+                                name="./footerContact"
+                                required="{Boolean}false"
+                                rootPath="/content"/>
+                            </items>
+                        </footerContactContainer>
+                    
+                        <testimonialsContainer
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="testimonials Container"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <testimonialsCheckbox
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                text="Open link in another tab."
+                                                                fieldDescription="Footer Testimonials link"                                name="./testimonialsCheckbox"
+                                value="true"/>
+                                <testimonials
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="testimonials"
+                                name="./testimonials"
+                                required="{Boolean}false"
+                                rootPath="/content"/>
+                            </items>
+                        </testimonialsContainer>
+                    
+                        <faqContainer
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="faq Container"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <faqCheckbox
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                text="Open link in another tab."
+                                                                fieldDescription="Footer FAQ link"                                name="./faqCheckbox"
+                                value="true"/>
+                                <faq
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="faq"
+                                name="./faq"
+                                required="{Boolean}false"
+                                rootPath="/content"/>
+                            </items>
+                        </faqContainer>
+                    
+                        <communityContainer
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="community Container"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <communityCheckbox
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                text="Open link in another tab."
+                                                                fieldDescription="Footer Community link"                                name="./communityCheckbox"
+                                value="true"/>
+                                <community
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="community"
+                                name="./community"
+                                required="{Boolean}false"
+                                rootPath="/content"/>
+                            </items>
+                        </communityContainer>
+                    
+                        <campusPicturesContainer
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="campusPictures Container"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <campusPicturesCheckbox
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                text="Open link in another tab."
+                                                                fieldDescription="Footer Campus Pictures link"                                name="./campusPicturesCheckbox"
+                                value="true"/>
+                                <campusPictures
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="campusPictures"
+                                name="./campusPictures"
+                                required="{Boolean}false"
+                                rootPath="/content"/>
+                            </items>
+                        </campusPicturesContainer>
+                    
+                        <tuitionsContainer
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="tuitions Container"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <tuitionsCheckbox
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                text="Open link in another tab."
+                                                                fieldDescription="Footer Tuitions link"                                name="./tuitionsCheckbox"
+                                value="true"/>
+                                <tuitions
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="tuitions"
+                                name="./tuitions"
+                                required="{Boolean}false"
+                                rootPath="/content"/>
+                            </items>
+                        </tuitionsContainer>
+                    
+                        <footerPinterestContainer
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="footerPinterest Container"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <footerPinterestCheckbox
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                text="Open link in another tab."
+                                                                fieldDescription="Footer Pinterest link"                                name="./footerPinterestCheckbox"
+                                value="true"/>
+                                <footerPinterest
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="footerPinterest"
+                                name="./footerPinterest"
+                                required="{Boolean}false"
+                                rootPath="/content"/>
+                            </items>
+                        </footerPinterestContainer>
+                    
+                        <footerLinkedInContainer
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="footerLinkedIn Container"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <footerLinkedInCheckbox
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                text="Open link in another tab."
+                                                                fieldDescription="Footer LinkedIn link"                                name="./footerLinkedInCheckbox"
+                                value="true"/>
+                                <footerLinkedIn
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="footerLinkedIn"
+                                name="./footerLinkedIn"
+                                required="{Boolean}false"
+                                rootPath="/content"/>
+                            </items>
+                        </footerLinkedInContainer>
+                    
+                        <footerInstagramContainer
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="footerInstagram Container"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <footerInstagramCheckbox
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                text="Open link in another tab."
+                                                                fieldDescription="Footer Instagram link"                                name="./footerInstagramCheckbox"
+                                value="true"/>
+                                <footerInstagram
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="footerInstagram"
+                                name="./footerInstagram"
+                                required="{Boolean}false"
+                                rootPath="/content"/>
+                            </items>
+                        </footerInstagramContainer>
+                    
+                        <footerFacebookContainer
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="footerFacebook Container"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <footerFacebookCheckbox
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                text="Open link in another tab."
+                                                                fieldDescription="Footer Facebook link"                                name="./footerFacebookCheckbox"
+                                value="true"/>
+                                <footerFacebook
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="footerFacebook"
+                                name="./footerFacebook"
+                                required="{Boolean}false"
+                                rootPath="/content"/>
+                            </items>
+                        </footerFacebookContainer>
+                    
+                        <footerTwitterContainer
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="footerTwitter Container"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                            <items jcr:primaryType="nt:unstructured">
+                                <footerTwitterCheckbox
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                text="Open link in another tab."
+                                                                fieldDescription="Footer Twitter link"                                name="./footerTwitterCheckbox"
+                                value="true"/>
+                                <footerTwitter
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="footerTwitter"
+                                name="./footerTwitter"
+                                required="{Boolean}false"
+                                rootPath="/content"/>
+                            </items>
+                        </footerTwitterContainer>
+                    
+                                                    </items>
+            </column>
+                    </items>
+    </content>
+</jcr:root>

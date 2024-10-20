@@ -5,7 +5,6 @@ const axios = require('axios');
 const { Mistral } = require("@mistralai/mistralai");
 
 
-
 const promptset = '../Promptset1_finetunes/Prompt4';
 const prompt = fs.readFileSync(promptset + '/Prompt.md', 'utf-8');
 
